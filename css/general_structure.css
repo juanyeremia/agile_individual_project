@@ -1,0 +1,18 @@
+body {
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+}
+
+.header_image {
+  width: 100%;       /* Spans the full width of the parent container */
+  height: 300px;     /* Set your specific height here */
+  overflow: hidden;  /* Prevents the image from spilling out */
+}
+
+.header_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Important: prevents the image from looking squashed */
+    /* Removes the tiny gap at the bottom of images */
+}
