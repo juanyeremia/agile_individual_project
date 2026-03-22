@@ -6,7 +6,7 @@ body {
 
 .header_image {
   width: 100%;       /* Spans the full width of the parent container */
-  height: 300px;     /* Set your specific height here */
+  height: 30vh;     /* Set your specific height here */
   overflow: hidden;  /* Prevents the image from spilling out */
 }
 
