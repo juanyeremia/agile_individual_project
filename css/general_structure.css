@@ -38,6 +38,10 @@ nav  {
   background-color: white;
 }
 
+nav.container-lg {
+  padding: 0;
+}
+
 /* ----------------------------Content------------------------- */
 .content_card {
   margin: 0 auto;
