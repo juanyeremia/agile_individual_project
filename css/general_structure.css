@@ -35,14 +35,17 @@ body {
 
 /* ----------------------------Nav------------------------- */
 nav  {
+  padding: 10px 0;
   background-color: white;
   /* border-bottom: 1px solid #F0F0F0; */
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  position: relative;       /* Z-index only works for positioned elements other than Static*/
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2);
+  position: sticky;       /* Z-index only works for positioned elements other than Static*/
+  top: 0;
   z-index: 10;              /* Ensure the nav is above other content */
 }
 
 .nav-link {
+  padding: 15px 0;
   color: black;
   font-weight: 600;
 }
