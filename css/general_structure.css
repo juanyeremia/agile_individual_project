@@ -1,7 +1,8 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    background-color: lightblue;
+    background-color: #F5F5F5 ;
+    color: #1A1A1A ;
 }
 
 /* .temp_border {
@@ -35,8 +36,7 @@ body {
 
 /* ----------------------------Nav------------------------- */
 nav  {
-  padding: 10px 0;
-  background-color: white;
+  background-color: #EEEEEE;
   /* border-bottom: 1px solid #F0F0F0; */
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2);
   position: sticky;       /* Z-index only works for positioned elements other than Static*/
@@ -59,9 +59,11 @@ nav.container-lg {
 }
 
 /* ----------------------------Content------------------------- */
+
+
 .content_card {
-  /* margin: 10px 0 0 0; */
-  margin: 0 auto;
-  background-color: white;
+  margin: 30px auto;
+  background-color: #FFFFFF;
   padding: 20px;
+  border-radius: 15px;
 }
