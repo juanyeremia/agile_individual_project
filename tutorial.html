@@ -19,14 +19,14 @@
     </header>
 
     <!-- Navbar -->
-     <div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
     
     <!-- Content -->
-    <section class="temp_border container-lg content_card">
+    <main class="temp_border container-lg content_card">
         <!-- Introduction -->
-        <div class="temp_border intro">
-                <h1 class="temp_border intro_header">Welcome to the tutorial!</h1>
-                <p class="temp_border intro_par">
+        <section class="temp_border intro">
+                <h2 class="temp_border intro_header">Welcome to the tutorial!</h2>
+                <p class="temp_border intro_par justify_par">
                         This tutorial is designed to help you learn the basics of Website Development using three core web technologies: HTML, CSS, and Javascript. Click on the links below to jump to each topic, or read through the tutorial in order.
                 </p>
                 <ul class="temp_border intro_tutorial_list">
@@ -34,15 +34,55 @@
                         <li class="temp_border intro_tutorial_list_item"><a href="#css">CSS</a></li>
                         <li class="temp_border intro_tutorial_list_item"><a href="#javascript">JavaScript</a></li>
                 </ul>
-        </div>
+        </section>
 
         <!-- Main Content -->
-        <div class="temp_border">
+        <section id="html" class="temp_border">
+                <h2 class="temp_border tutorial_header">1. HTML</h2>
+                <!-- HTML Overview -->
+                <p class="temp_border tutorial_par justify_par">
+                        HTML stands for HyperText Markup Language. 
+                        It is the standard markup language used to create web pages. 
+                        HTML describes <b>the structure of a web page</b> using a series of <b>elements and tags</b>. 
+                        Each element has a specific purpose and can contain text, images, links, and other media. 
+                        HTML is the backbone of every website and is essential for creating a well-structured and accessible web page. 
+                        HTML was originally defined by TIM Berners-Lee. <b>HTML5</b> was a significant revamp.
+                </p>
+                
+                <!-- HTML5 Philosophy -->
+                <p class="temp_border"><b>HTML5 Philosophy:</b></p>
+                <ol class="temp_border">
+                        <li class="temp_border">
+                                <p class="temp_border"><b>Interoperability</b> - should be renderable on a wide variety of browser.</p>
+                        </li>
+                        <li class="temp_border">
+                                <p class="temp_border"><b>Graceful error recovery</b> - small errors should not stop the page from rendering.</p>
+                        </li>
+                        <li class="temp_border">
+                                <p class="temp_border"><b>Backwards compatibility</b> - new features should not break the web.</p>
+                        </li>
+                        <li class="temp_border">
+                                <p class="temp_border"><b>Prioritize users</b> - User > Web dev > browser implementer > theorists</p>
+                        </li>
+                        <li class="temp_border">
+                                <p class="temp_border"><b>Separation of concerns</b> - describe the type of information, not how it displays.</p>
+                        </li>
+                </ol>
 
-        </div>
+                <!-- subtopic 1 -->
+                <h3 class="temp_border">1.1. Document Structure</h3>
 
-        <div class="temp_border"></div>
-    </section>
+                <!-- subtopic 2 -->
+        </section>
+
+        <section id="css" class="temp_border">
+                <h2 class="temp_border tutorial_header">2. CSS</h2>
+        </section>
+
+        <section id="javascript" class="temp_border">
+                <h2 class="temp_border tutorial_header">3. JavaScript</h2>
+        </section>
+    </main>
 
     <!-- This Bootstrap's JS bundle script scans the page for data-bs-* attributes and attaches event listeners to them -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

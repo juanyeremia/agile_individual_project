@@ -80,8 +80,6 @@ body {
 }
 
 /* Content------------------------------------------------ */
-
-
 .content_card {
   max-width: 1000px;
   margin: 30px auto;
@@ -89,4 +87,8 @@ body {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.justify_par {
+    text-align: justify;
 }
