@@ -20,8 +20,11 @@ body {
     border: 2px solid red;
 } */
 
-/* Bootstrap overrides ------------------------------------------- */
-
+.rounded_text_colored {
+    border: 2px solid var(--forest-border);
+    border-radius: 15px;
+    padding: 20px;
+}
 
 /* Header ---------------------------------------------------------*/
 .header_image {
@@ -98,6 +101,7 @@ body {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+
 }
 
 .content_header {
@@ -116,3 +120,37 @@ body {
 .intro_tutorial_list_item a{
   color: var(--forest-accent);
 }
+
+.additional-note {
+    /* background-color: var(--forest-accent-lt); */
+    border-left: 4px solid var(--forest-aside-border);
+    padding: 10px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+}
+
+.note-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #16a34a;
+    margin-bottom: 6px;
+}
+
+/* Code blocks------------------------------------------- */
+.code_snippet {
+    background-color: var(--forest-code-bg);
+    color: var(--forest-code-text);
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.inline_code {
+    background-color: var(--forest-accent-lt);
+    color: var(--forest-code-bg);
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
