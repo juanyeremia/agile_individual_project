@@ -149,6 +149,62 @@
                 unless the image is purely decorative. Screen readers skip empty alt attributes, but a 
                 missing one entirely will read out the full file path — useless to a visually impaired user.</p>
                 </div>
+
+                <!-- 1.7 Forms -->
+                <h3 class="temp_border content_header">1.7 Forms</h3>
+                <p class="temp_border tutorial_par justify_par">
+                Forms collect user input and send it to a server. The <code class="inline_code">&lt;form&gt;</code> 
+                element wraps all inputs. The <code class="inline_code">action</code> attribute sets where the 
+                data is sent, and <code class="inline_code">method</code> controls how the data is sent. The <code class="inline_code">GET</code> 
+                method appends values to the URL, while <code class="inline_code">POST</code> hides them in the request body. 
+                <br><br>
+                Always pair each input with a <code class="inline_code">&lt;label&gt;</code> using matching 
+                <code class="inline_code">for</code> that matches with the <code class="inline_code">id</code> attributes inside the pairing <code class="inline_code">&lt;input&gt;</code> for accessibility.
+                </p>
+
+<pre><code class="temp_border language-html code_snippet">&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name&lt;/label&gt;          &lt;!-- linked to input below via id --&gt;
+  &lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;label for="age"&gt;Age&lt;/label&gt;
+  &lt;input type="number" id="age" name="age" min="0" max="120"&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">The <code class="inline_code">type</code> 
+                attribute on inputs matters beyond just validation On mobile devices, 
+                <code class="inline_code">type="email"</code> brings up a keyboard with the <b>@</b> symbol.
+                <code class="inline_code">type="number"</code> brings up a number pad. This is 
+                the browser doing the work for your users automatically.</p>
+                </div>
+
+                <!-- 1.8 Form Validation -->
+                <h3 class="temp_border content_header">1.8 Form Validation</h3>
+                <p class="temp_border tutorial_par justify_par">
+                HTML provides basic built-in validation through input attributes. The 
+                <code class="inline_code">required</code> attribute prevents empty submissions, 
+                <code class="inline_code">minlength</code> and <code class="inline_code">maxlength</code> 
+                control text length, and <code class="inline_code">pattern</code> matches a regular expression. 
+                <br><br>
+                However, client-side validation can always be bypassed. For example, a user can open DevTools and 
+                remove the validation attributes. Always validate on the server too.
+                </p>
+
+<pre><code class="temp_border language-html code_snippet">&lt;input type="text" required minlength="3" maxlength="20"&gt;   &lt;!-- text length rules --&gt;
+&lt;input type="number" min="1" max="100"&gt;                      &lt;!-- numeric range --&gt;
+&lt;input type="email"&gt;                                         &lt;!-- format auto-validated --&gt;</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par"><b>Client-side validation</b> is for <b>user experience</b>. It gives instant feedback without a server round-trip. <b>Server-side validation</b> is for 
+                security.</p>
+                </div>
         </section>
 
         <section id="css" class="temp_border">
