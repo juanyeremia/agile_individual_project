@@ -140,7 +140,7 @@ body {
 /* Code blocks------------------------------------------- */
 .code_snippet {
     background-color: var(--forest-code-bg);
-    color: var(--forest-code-text);
+
     padding: 15px;
     border-radius: 10px;
     overflow-x: auto;

@@ -77,10 +77,10 @@
                 </p>
                 
                 <!-- Code snippet for document structure -->
-                <pre><code class="temp_border language-html code_snippet">&lt;!DOCTYPE html&gt;
+<pre><code class="temp_border language-html code_snippet">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
         &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
+                &lt;meta charset="UTF-8"&gt;
                 &lt;title&gt;My Page&lt;/title&gt;
                 &lt;link rel="stylesheet" href="style.css"&gt;
         &lt;/head&gt;
@@ -96,8 +96,59 @@
                         </p>
                 </div>
 
-                <!-- subtopic 3 -->
-                 
+                <!-- 1.3 Common Elements -->
+                <h3 class="temp_border content_header">1.3 Common Elements</h3>
+                <p class="temp_border tutorial_par justify_par">
+                 HTML provides a set of elements for structuring text content. Headings range from 
+    <code class="inline_code">&lt;h1&gt;</code> (most important) to <code class="inline_code">&lt;h6&gt;</code> 
+    (least important) and should follow a logical hierarchy. It is good practice to follow the heading hierarchy. Paragraphs use 
+    <code class="inline_code">&lt;p&gt;</code>, and emphasis can be added with 
+    <code class="inline_code">&lt;em&gt;</code> for italic or <code class="inline_code">&lt;strong&gt;</code> 
+    for bold.
+                </p>
+                
+
+<pre><code class="temp_border language-html code_snippet">&lt;h1&gt;Main heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;A paragraph with &lt;em&gt;emphasis&lt;/em&gt; and &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
+
+&lt;!-- Unordered list --&gt;
+&lt;ul&gt;
+        &lt;li&gt;Item one&lt;/li&gt;
+        &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered list --&gt;
+&lt;ol&gt;
+        &lt;li&gt;First step&lt;/li&gt;
+        &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                <!-- 1.4 Links and Images -->
+                <h3 class="temp_border content_header">1.4 Links and Images</h3>
+                <p class="temp_border tutorial_par justify_par">
+                Links are created with the <code class="inline_code">&lt;a&gt;</code> tag using the 
+                <code class="inline_code">href</code> attribute. When <strong>linking within your own site</strong> always 
+                use <strong>relative paths</strong> so that they won't break if you move the project to a different 
+                server. Images use the self-closing <code class="inline_code">&lt;img&gt;</code> tag and 
+                always need an <code class="inline_code">alt</code> attribute for accessibility.
+                </p>
+
+<pre><code class="temp_border language-html code_snippet">&lt;!-- Relative link (same site) --&gt;
+&lt;a href="./quiz.html"&gt;Go to Quiz&lt;/a&gt;
+
+&lt;!-- Absolute link (external site) --&gt;
+&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+
+&lt;!-- Image with alt text --&gt;
+&lt;img src="./assets/photo.jpg" alt="Description of the image"&gt;</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">Never leave <code class="inline_code">alt</code> empty 
+                unless the image is purely decorative. Screen readers skip empty alt attributes, but a 
+                missing one entirely will read out the full file path — useless to a visually impaired user.</p>
+                </div>
         </section>
 
         <section id="css" class="temp_border">
