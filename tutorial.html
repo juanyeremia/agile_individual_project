@@ -149,6 +149,60 @@
                 unless the image is purely decorative. Screen readers skip empty alt attributes, but a 
                 missing one entirely will read out the full file path — useless to a visually impaired user.</p>
                 </div>
+
+                <!-- 1.5 Tables -->
+                 <h3 class="temp_border content_header">1.5 Tables</h3>
+<p class="temp_border tutorial_par justify_par">
+    Tables are used to display data in rows and columns. The <code class="inline_code">&lt;table&gt;</code> 
+    element wraps everything. Each row uses <code class="inline_code">&lt;tr&gt;</code>, header cells use 
+    <code class="inline_code">&lt;th&gt;</code>, and data cells use <code class="inline_code">&lt;td&gt;</code>.
+</p>
+
+<pre><code class="temp_border language-html code_snippet">&lt;table&gt;
+  &lt;tr&gt; &lt;!-- header row --&gt;
+    &lt;th&gt;Name&lt;/th&gt; &lt;!-- header column --&gt;
+    &lt;th&gt;Age&lt;/th&gt;  &lt;!-- header column --&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;!-- first data row --&gt;
+    &lt;td&gt;Alice&lt;/td&gt; &lt;!-- data column --&gt;
+    &lt;td&gt;22&lt;/td&gt;    &lt;!-- data column --&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;!-- second data row --&gt;
+    &lt;td&gt;Bob&lt;/td&gt; &lt;!-- data column --&gt;
+    &lt;td&gt;25&lt;/td&gt;  &lt;!-- data column --&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">Only use tables for tabular data, never to layout a page. Tables used for layout will break screen readers, are hard to maintain, 
+                and can render unpredictably across browsers. Use CSS <strong>flexbox</strong> or <strong>grid</strong> for layout instead.</p>
+                </div>
+
+                <!-- 1.6 Semantic Elements -->
+                <h3 class="temp_border content_header">1.6 Semantic Elements</h3>
+                <p class="temp_border tutorial_par justify_par">
+                HTML5 introduced purpose-built layout elements that tells us their meaning rather than just 
+                grouping content. Using these correctly will improve accessibility and helps search engines 
+                understand your page structure.
+                </p>
+
+<pre><code class="temp_border language-html code_snippet">&lt;header&gt;Site logo and title&lt;/header&gt;
+&lt;nav&gt;Navigation links&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section&gt;A thematic group of content&lt;/section&gt;
+  &lt;article&gt;A self-contained piece like a blog post&lt;/article&gt;
+  &lt;aside&gt;Related content, e.g. a sidebar&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Copyright and links&lt;/footer&gt;</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">Use <code class="inline_code">&lt;section&gt;</code> if you want it included in a table of contents. Use 
+                        <code class="inline_code">&lt;article&gt;</code> if it can stand alone and be republished elsewhere. 
+                        Use <code class="inline_code">&lt;div&gt;</code> if you are just wrapping something for styling.</p>
+                </p>
+                </div>
         </section>
 
         <section id="css" class="temp_border">
