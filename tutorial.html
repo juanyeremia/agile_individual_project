@@ -356,14 +356,73 @@ h1 ~ h2 { }        /* general sibling - any &lt;h2&gt; after &lt;h1&gt; */</code
   /* Total rendered width = 200 + 20 + 20 + 2 + 2 = 244px */
 }</code></pre>
 
-<div class="temp_border additional-note">
-    <p class="temp_border note-label">Additional Note</p>
-    <p class="temp_border tutorial_par">By default, <code class="inline_code">width</code> 
-    only sets the content area — padding and border are added on top, which often produces 
-    unexpected widths. Add <code class="inline_code">box-sizing: border-box</code> to make 
-    the width include padding and border, which is far more intuitive. Many developers apply 
-    this globally: <code class="inline_code">* { box-sizing: border-box; }</code></p>
-</div>
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">By default, <code class="inline_code">width</code> 
+                only sets the content area — padding and border are added on top, which often produces 
+                unexpected widths. Add <code class="inline_code">box-sizing: border-box</code> to make 
+                the width include padding and border, which is far more intuitive. Many developers apply 
+                this globally: <code class="inline_code">* { box-sizing: border-box; }</code></p>
+                </div>
+
+                <!-- 2.4 Cascade and Specificity -->
+                <h3 class="temp_border content_header">2.4 Cascade and Specificity</h3>
+                <p class="temp_border tutorial_par justify_par">
+                When multiple CSS rules target the same element, the browser needs to decide 
+                which one wins. It follows three steps in order: first it checks 
+                <code class="inline_code">origin</code> (author styles beat browser defaults), 
+                then <code class="inline_code">specificity</code> (more specific selectors win), 
+                then <code class="inline_code">order</code> (the last rule declared wins if 
+                everything else is equal).
+                </p>
+
+<pre><code class="temp_border language-css code_snippet">/* Specificity increases from top to bottom */
+p { color: black; }            /* element selector — lowest specificity */
+.intro { color: blue; }        /* class selector — beats element */
+#main { color: green; }        /* id selector — beats class */
+p { color: red !important; }   /* !important — overrides everything, use sparingly */</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">Avoid using <code class="inline_code">!important</code> 
+                as a habit as it breaks the natural cascade and makes debugging much harder. If you find 
+                yourself reaching for it often, it usually means your selectors are poorly structured. 
+                The fix is to write more specific selectors, not override everything with 
+                <code class="inline_code">!important</code>.</p>
+                </div>
+
+                <!-- 2.5 Layout -->
+                <h3 class="temp_border content_header">2.5 Layout</h3>
+                <p class="temp_border tutorial_par justify_par">
+                By default, <b>block</b> elements stack vertically and <b>inline</b> elements flow horizontally. 
+                CSS gives you three main tools to override this default flow: <code class="inline_code">float</code>, 
+                <code class="inline_code">position</code>, and <code class="inline_code">display</code>. 
+                Each has its own use cases, but mastering them is key to controlling your page layout.
+                </p>
+
+<pre><code class="temp_border language-css code_snippet">/* 1. Float - shifts element left or right, text wraps around it */
+img { float: right; }
+
+/* 2. Position - controls where an element sits */
+.box { position: static; }    /* default - normal flow */
+.box { position: relative; }  /* offset from its normal position */
+.box { position: absolute; }  /* removed from flow, positioned to nearest ancestor */
+.box { position: fixed; }     /* removed from flow, stays fixed to viewport */
+.box { position: sticky; }    /* switches between relative and fixed on scroll */
+
+/* 3. Display — changes how element participates in flow */
+span { display: block; }      /* makes inline element behave like a block */
+div  { display: inline; }     /* makes block element behave like inline */
+div  { display: flex; }       /* enables flexbox layout on children */</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par"><code class="inline_code">position: sticky</code> 
+                is what makes your navbar stay at the top of the screen as you scroll. It behaves 
+                like <code class="inline_code">relative</code> until the element reaches the top of 
+                the viewport, then switches to <code class="inline_code">fixed</code>. This is exactly 
+                how the navbar on this page works.</p>
+                </div>
         </section>
 
         <section id="javascript" class="temp_border">
