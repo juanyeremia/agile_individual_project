@@ -475,6 +475,39 @@ console.log(typeof text);   // "string"</code></pre>
                         <code class="inline_code">==</code> to avoid type coercion in comparisons.</p>
                 </div>
 
+                <!-- 3.2. Functions -->
+                <h3 class="temp_border content_header">3.2 Functions</h3>
+                <p class="temp_border tutorial_par justify_par">
+                        Functions are reusable blocks of code. In JavaScript, functions are 
+                        first-class objects — they can be assigned to variables, passed as arguments, 
+                        and returned from other functions. There are two common ways to write them.
+                </p>
+
+<pre><code class="temp_border language-javascript code_snippet">// Function declaration
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Arrow function — shorter syntax, same result
+const greet = (name) => "Hello, " + name;
+
+// Functions assigned to variables
+const add = function(a, b) {
+    return a + b;
+};
+
+console.log(greet("Juan"));  // "Hello, Juan"
+console.log(add(3, 4));      // 7</code></pre>
+
+                <div class="temp_border additional-note">
+                        <p class="temp_border note-label">Additional Note</p>
+                        <p class="temp_border tutorial_par">Accessing a function without 
+                        <code class="inline_code">()</code> returns the function itself, not its result. 
+                        For example, <code class="inline_code">greet</code> gives you the function definition, 
+                        while <code class="inline_code">greet("Juan")</code> calls it and gives you 
+                        <code class="inline_code">"Hello, Juan"</code>. This distinction matters when 
+                        passing functions as arguments to event listeners.</p>
+                </div>
         </section>
     </main>
 
