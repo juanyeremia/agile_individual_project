@@ -508,6 +508,46 @@ console.log(add(3, 4));      // 7</code></pre>
                         <code class="inline_code">"Hello, Juan"</code>. This distinction matters when 
                         passing functions as arguments to event listeners.</p>
                 </div>
+
+                <!-- 3.3 The DOM -->
+                <h3 class="temp_border content_header">3.3 The DOM</h3>
+                <p class="temp_border tutorial_par justify_par">
+                When a browser loads an HTML page it builds a  <b>tree structure</b> in memory called the 
+                Document Object Model (DOM). <b>Every HTML element becomes a node in this tree.</b> 
+                JavaScript can access and modify these nodes, like changing text, attributes, styles, 
+                or even adding and removing elements entirely without reloading the page.
+                </p>
+
+<pre><code class="temp_border language-javascript code_snippet">// Accessing elements
+const heading = document.getElementById("main-title");      // by id
+const paragraphs = document.getElementsByTagName("p");      // all &lt;p&gt; elements
+const cards = document.getElementsByClassName("card");      // by class
+
+// Reading and changing content
+heading.textContent = "New Title";         // changes the text
+heading.innerHTML = "&lt;em&gt;New Title&lt;/em&gt;"; // changes the HTML inside
+
+// Changing styles
+heading.style.color = "green";
+heading.style.fontSize = "2rem";
+
+// Changing attributes
+const img = document.getElementById("photo");
+img.setAttribute("alt", "Updated description");
+
+// Creating and adding new elements
+const newPara = document.createElement("p");
+newPara.textContent = "This was added by JavaScript";
+document.body.appendChild(newPara);</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">Prefer <code class="inline_code">textContent</code> 
+                over <code class="inline_code">innerHTML</code> when you are only inserting plain text. 
+                Using <code class="inline_code">innerHTML</code> with user-supplied input is a security 
+                risk. A malicious user could inject script tags and run arbitrary code on your page. 
+                This is known as Cross-Site Scripting (XSS).</p>
+                </div>
         </section>
     </main>
 
