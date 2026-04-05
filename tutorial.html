@@ -436,8 +436,44 @@ div  { display: flex; }       /* enables flexbox layout on children */</code></p
                         and communicate with servers without reloading the page.
                 </p>
 
-                
+                <!-- 3.1. Variables and Data Types -->
+                <h3 class="temp_border content_header">3.1 Variables and Types</h3>
+                <p class="temp_border tutorial_par justify_par">
+                        JavaScript has three ways to declare variables. <code class="inline_code">const</code>, <code class="inline_code">let</code>, <code class="inline_code">var</code>. 
+                        Use <code class="inline_code">const</code> by default as it "locks" the variable, preventing it from being reassigned accidentally. 
+                        
+                        Use <code class="inline_code">let</code> when you need to reassign. 
+                        
+                        <code class="inline_code">var</code> is the old way to declare variables and should be avoided in modern JavaScript. It has function 
+                        scope rather than block scope which leads to subtle bugs. JavaScript is dynamically typed, 
+                        meaning a variable can hold any type and its type can change at runtime.
+                </p>
 
+<pre><code class="temp_border language-javascript code_snippet">const name = "Juan";        // cannot be reassigned
+let age = 21;               // can be reassigned
+age = 22;                   // fine with let
+
+// Primitive types
+let num = 42;               // Number
+let text = "hello";         // String
+let flag = true;            // Boolean
+let empty = null;           // intentionally empty
+let notDefined;             // undefined (no value assigned yet)
+
+// typeof tells you the current type
+console.log(typeof num);    // "number"
+console.log(typeof text);   // "string"</code></pre>
+
+                <div class="temp_border additional-note">
+                        <p class="temp_border note-label">Additional Note</p>
+                        <p class="temp_border tutorial_par">JavaScript will try to <b>convert types automatically</b> 
+                        when performing operations. This is called <b>implicit type coercion</b>. It can produce 
+                        surprising results: <code class="inline_code">"5" + 3</code> gives 
+                        <code class="inline_code">"53"</code> (string concatenation), but 
+                        <code class="inline_code">"5" - 3</code> gives <code class="inline_code">2</code> 
+                        (numeric subtraction). Always use <code class="inline_code">===</code> instead of 
+                        <code class="inline_code">==</code> to avoid type coercion in comparisons.</p>
+                </div>
 
         </section>
     </main>
