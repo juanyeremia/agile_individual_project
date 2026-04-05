@@ -548,6 +548,48 @@ document.body.appendChild(newPara);</code></pre>
                 risk. A malicious user could inject script tags and run arbitrary code on your page. 
                 This is known as Cross-Site Scripting (XSS).</p>
                 </div>
+
+                <!-- 3.4 Events -->
+                <h3 class="temp_border content_header">3.4 Events</h3>
+                <p class="temp_border tutorial_par justify_par">
+                Events are actions that happen in the browser, like a button click, a key press, 
+                a form submission, or a page loading. JavaScript responds to these 
+                using <b>event listeners</b>. The most common way to register an event listener is by using  
+                <code class="inline_code">addEventListener</code>. It keeps your JavaScript 
+                separate from your HTML and allows multiple handlers on the same element.
+                </p>
+
+<pre><code class="temp_border language-javascript code_snippet">const btn = document.getElementById("my-btn");
+
+// Using addEventListener
+btn.addEventListener("click", function() {
+    console.log("Button clicked!");
+});
+
+// Arrow function shorthand
+btn.addEventListener("click", () => {
+    document.getElementById("output").textContent = "You clicked the button!";
+});
+
+// Common events
+// "click"      - mouse click
+// "input"      - value of input field changes
+// "submit"     - form is submitted
+// "keydown"    - keyboard key is pressed
+// "mouseover"  - mouse enters an element
+// "load"       - page has fully loaded</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">When registering an event listener, always pass 
+                        the function as a reference, like <code class="inline_code">addEventListener("click", handleClick)</code>, 
+                        not as an invocation. Adding <code class="inline_code">()</code> like 
+                        <code class="inline_code">addEventListener("click", handleClick())</code> runs the 
+                        function <em>immediately</em> when that line is reached, before any event has occurred. 
+                        The browser then receives the return value instead of the function itself, 
+                        which is almost always <code class="inline_code">undefined</code>,
+                        meaning the handler will never actually fire on click.</p>
+                </div>
         </section>
     </main>
 
