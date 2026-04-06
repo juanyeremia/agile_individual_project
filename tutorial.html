@@ -590,6 +590,47 @@ btn.addEventListener("click", () => {
                         which is almost always <code class="inline_code">undefined</code>,
                         meaning the handler will never actually fire on click.</p>
                 </div>
+
+                <!-- 3.5 jQuery -->
+                <h3 class="temp_border content_header">3.5 jQuery</h3>
+                <p class="temp_border tutorial_par justify_par">
+                jQuery is a JavaScript library that makes DOM manipulation and event handling 
+                more efficient. Instead of basic, verbose vanilla JS like 
+                <code class="inline_code">document.getElementById("btn")</code>, jQuery lets you 
+                shorten it into <code class="inline_code">$("#btn")</code>. It uses CSS-style selectors, 
+                making it intuitive if you already know CSS.
+                </p>
+
+<pre><code class="temp_border language-javascript code_snippet">// Vanilla JS vs jQuery. Produces the same result with less code
+document.getElementById("title").textContent = "Hello";  // vanilla
+$("#title").text("Hello");                               // jQuery
+
+// Selecting elements
+$("p")          // all &lt;p&gt; elements
+$(".card")      // elements with class="card"
+$("#main")      // element with id="main"
+
+// Getting and setting content
+$("#title").text();              // get text content
+$("#title").text("New Title");   // set text content
+$("#box").html("&lt;em&gt;Hi&lt;/em&gt;"); // set inner HTML
+
+// Event handling
+$("#btn").on("click", function() {
+    $("#output").text("Button clicked!");
+});
+
+// Chaining — apply multiple actions in one statement
+$("li").filter(".active").css("color", "green").show();</code></pre>
+
+                <div class="temp_border additional-note">
+                <p class="temp_border note-label">Additional Note</p>
+                <p class="temp_border tutorial_par">jQuery must be loaded before your script uses it. 
+                <b>Add it via CDN in your <code class="inline_code">&lt;head&gt;</code></b> before your own 
+                script tags. Also note that <code class="inline_code">$(document).ready(function() {})</code> 
+                delays your jQuery code until the DOM is fully loaded. This is the jQuery equivalent 
+                of waiting for the page to finish building before trying to access elements on it.</p>
+                </div>
         </section>
     </main>
 
