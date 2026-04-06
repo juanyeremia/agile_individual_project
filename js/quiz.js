@@ -114,3 +114,67 @@ $(document).on('change', 'input[type=radio]', function() {          // use $(doc
     });
   }
 });
+
+/*
+4. When submit button is clicked
+- Check all questions are answered
+- Calculat score
+- Clear beforeunload warning
+- Save score to localStorage
+- Show restults
+- Fetch joke from API if passed
+*/
+
+$('#submit-btn').on('click', function() {
+  submitQuiz();
+});
+
+function submitQuiz() {
+  // Check all questions are answered
+  let unanswered = [];
+
+  questions.forEach(function(q, index) {
+    const selected = $('input[name="question-' + index + '"]:checked');
+    if (selected.length === 0) {
+      unanswered.push(index);
+    }
+  });
+
+  // If any unanswered, highlight and stop
+  if (unanswered.length > 0) {
+    // Remove previous highlights
+    $('.question-card').removeClass('unanswered');
+
+    // Highlight unanswered questions
+    unanswered.forEach(function(index) {
+      $('#question-' + index).addClass('unanswered');   // For each index in unanswered, add class 'unanswered' into it 
+    });
+
+    alert('Please answer all questions before submitting!');
+    return; // Stop submission if not all answered
+  }
+
+  // All questions answered, calculate score
+  let score = 0;
+
+  questions.forEach(function(q, index) {
+    const selected = parseInt($('input[name="question-' + index + '"]:checked').val());
+    if (selected === q.answer) {
+      score++;
+    }
+  });
+
+  const total = questions.length;
+  const percentage = Math.round((score / total) * 100);
+  const passed = percentage >= 70; // Pass if 70% or above
+
+  // Clear beforeunload warning
+  window.onbeforeunload = null;
+  hasStarted = false;
+
+  // Save score to localStorage
+  saveAttempt(score, total, percentage, passed);
+
+  // Show results
+  showResults(score, total, percentage, passed);
+}
