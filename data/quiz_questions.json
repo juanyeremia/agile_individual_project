@@ -11,16 +11,16 @@
     },
     {
         "question": "Which tag is used to define the main content of an HTML document?",
-        "options": ["&lt;section&gt;", "&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;"],
+        "options": ["<section>", "<main>", "<body>", "<content>"],
         "answer": 1
     },
     {
         "question": "Which of the following is the correct way to link an external CSS file?",
         "options": [
-            "&lt;style src='style.css'&gt;",
-            "&lt;css href='style.css'&gt;",
-            "&lt;link rel='stylesheet' href='style.css'&gt;",
-            "&lt;script href='style.css'&gt;"
+            "<style src='style.css'>",
+            "<css href='style.css'>",
+            "<link rel='stylesheet' href='style.css'>",
+            "<script href='style.css'>"
         ],
         "answer": 2
     },
@@ -66,7 +66,7 @@
     },
     {
         "question": "Which HTML element is semantically correct for the main navigation links?",
-        "options": ["&lt;div&gt;", "&lt;ul&gt;", "&lt;section&gt;", "&lt;nav&gt;"],
+        "options": ["<div>", "<ul>", "<section>", "<nav>"],
         "answer": 3
     },
     {
