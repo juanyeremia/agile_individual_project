@@ -98,3 +98,19 @@ function renderQuestions() {
         $('#questions-container').append(questionHTML); // Injects the questions into the Quiz page where id = "questions-container"
     });
 }
+
+/*
+3. While answering
+- Activate 
+*/
+
+// Watch for first answer selection to activate 'beforeunload' warning
+$(document).on('change', 'input[type=radio]', function() {          // use $(document) to capture any clicked radio button instead of ataching an event listener to each radio button
+  if (!hasStarted) {
+    hasStarted = true;
+    // Activate the browser warning if user tries to leave mid-quiz
+    window.addEventListener('beforeunload', function(e) {
+      e.preventDefault();
+    });
+  }
+});
