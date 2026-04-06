@@ -1,0 +1,87 @@
+[
+    {
+        "question": "What does HTML stand for?",
+        "options": [
+            "Hyper Text Markup Language",
+            "High Tech Modern Language",
+            "Hyper Transfer Markup Language",
+            "Home Tool Markup Language"
+        ],
+        "answer": 0
+    },
+    {
+        "question": "Which tag is used to define the main content of an HTML document?",
+        "options": ["&lt;section&gt;", "&lt;main&gt;", "&lt;body&gt;", "&lt;content&gt;"],
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is the correct way to link an external CSS file?",
+        "options": [
+            "&lt;style src='style.css'&gt;",
+            "&lt;css href='style.css'&gt;",
+            "&lt;link rel='stylesheet' href='style.css'&gt;",
+            "&lt;script href='style.css'&gt;"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In CSS, which property controls the space between the content and the border?",
+        "options": ["margin", "spacing", "padding", "border-gap"],
+        "answer": 2
+    },
+    {
+        "question": "Which CSS selector has the highest specificity?",
+        "options": ["Element selector", "Class selector", "ID selector", "Universal selector"],
+        "answer": 2
+    },
+    {
+        "question": "Which keyword should you use by default when declaring a variable in JavaScript?",
+        "options": ["var", "let", "const", "def"],
+        "answer": 2
+    },
+    {
+        "question": "What does === do in JavaScript?",
+        "options": [
+            "Assigns a value to a variable",
+            "Compares values only, ignoring type",
+            "Compares both value and type",
+            "Converts a value to boolean"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "Which method is the preferred way to register an event listener in JavaScript?",
+        "options": [
+            "element.onclick = function(){}",
+            "element.addEventListener()",
+            "element.attachEvent()",
+            "element.on()"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "What will typeof null return in JavaScript?",
+        "options": ["'null'", "'undefined'", "'object'", "'boolean'"],
+        "answer": 2
+    },
+    {
+        "question": "Which HTML element is semantically correct for the main navigation links?",
+        "options": ["&lt;div&gt;", "&lt;ul&gt;", "&lt;section&gt;", "&lt;nav&gt;"],
+        "answer": 3
+    },
+    {
+        "question": "What does the CSS position value 'sticky' do?",
+        "options": [
+            "Fixes the element to the viewport permanently",
+            "Removes the element from normal flow",
+            "Switches between relative and fixed based on scroll position",
+            "Positions the element relative to its nearest ancestor"
+        ],
+        "answer": 2
+    },
+    {
+        "question": "In jQuery, which of the following correctly selects all elements with the class 'card'?",
+        "options": ["jQuery('card')", "$('#card')", "$('.card')", "jQuery('.card{}')"],
+        "answer": 2
+    }
+]
