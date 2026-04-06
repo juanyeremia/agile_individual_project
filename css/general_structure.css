@@ -109,6 +109,11 @@ body {
   color: var(--forest-nav);
 }
 
+h3 {
+    margin-top: 30px;
+}
+
+
 .justify_par {
     text-align: justify;
 }

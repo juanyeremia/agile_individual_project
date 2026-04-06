@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
     <link rel="stylesheet" href="./css/general_structure.css">
     <link rel="stylesheet" href="./css/tutorial.css">    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
 </head>
 <body class="justify-content-center">
     <!-- Header -->
@@ -632,6 +635,40 @@ $("li").filter(".active").css("color", "green").show();</code></pre>
                 of waiting for the page to finish building before trying to access elements on it.</p>
                 </div>
         </section>
+
+        <!-- Interactive Demo -->
+<section id="demo" class="temp_border">
+    <h2 class="temp_border content_header">Try It Yourself</h2>
+    <p class="temp_border tutorial_par justify_par">
+        Type any HTML into the editor below and click <b>Run</b> to see it rendered live. 
+        Try writing headings, paragraphs, lists, or links using what you have learned 
+        in this tutorial.
+    </p>
+
+    <div class="temp_border demo-container">  <!-- Using flexbox (demo-container) to have the editor and preview side by side -->
+        <div class="temp_border demo-editor-side"> <!-- Using vertical flex column -->
+            <p class="temp_border demo-label">HTML Editor</p>
+            <textarea id="demo-input" class="temp_border demo-textarea" spellcheck="false">&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;This is a &lt;strong&gt;paragraph&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ul&gt;</textarea>
+            <button id="run-btn" class="temp_border demo-run-btn">Run</button>
+        </div>
+
+        <div class="temp_border demo-preview-side"> <!-- Using vertical flex column -->
+            <p class="temp_border demo-label">Output</p>
+            <div id="demo-output" class="temp_border demo-output"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Quiz CTA -->
+<section class="temp_border to-quiz-section">
+    <p class="temp_border tutorial_par">Finished the tutorial? Test your knowledge!</p>
+    <a href="./quiz.html" class="temp_border to-quiz-btn">Take the Quiz →</a>
+</section>
     </main>
 
     <!-- Script for syntax highlighting -->
@@ -641,5 +678,6 @@ $("li").filter(".active").css("color", "green").show();</code></pre>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
      <!-- Connect page to main.js -->
     <script src="./js/main.js"></script>
+    <script src="./js/tutorial.js"></script>
 </body>
 </html>
