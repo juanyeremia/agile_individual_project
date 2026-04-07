@@ -178,3 +178,22 @@ function submitQuiz() {
   // Show results
   showResults(score, total, percentage, passed);
 }
+
+/*
+5. Save attempt and Show Results
+- Saves attempt to lcoalStorage
+- Displays score, percentage and pass/fail message
+*/
+
+// Save quiz attempt to localStorage
+function saveAttempt(score, total, percentage, passed) {
+  // Building the attempt object
+  const attempt = {
+    score: score,
+    total: total,
+    percentage: percentage, 
+    passed: passed,
+    timestamp: new Date().toISOString() // Save the current date and time
+  };
+  
+}
