@@ -211,3 +211,32 @@ function saveAttempt(score, total, percentage, passed) {
     return;
   }
 }
+
+// Show results on the page
+function showResults(score, total, percentage, passed) {
+  // Hide questions, show results
+  $('#quiz-questions').hide();    // Element with id "quiz-questions" will be hidden
+  $('#quiz-results').show();      // Element with id "quiz-results" will be shown
+
+  // Build results HTML
+  const resultHTML = `
+    <div class="result-score">
+      <p>Score: <strong>${score} / ${total}</strong></p>
+      <p>Percentage: <strong>${percentage}%</strong></p>
+      <p>Result: <strong class="${passed ? 'result-pass' : 'result-fail'}">
+          ${passed ? 'PASS' : 'FAIL'}
+      </strong></p>
+      <p class="pass-threshold">Pass threshold: 70%</p>
+    </div>
+  `;
+
+  $('#results-container').html(resultHTML); // Inject results into the page
+
+  // If passed, fetch a joke
+  if (passed) {
+    fetchJoke();
+  }
+
+  // Show attempt history
+  showHistory();
+} 
