@@ -196,4 +196,18 @@ function saveAttempt(score, total, percentage, passed) {
     timestamp: new Date().toISOString() // Save the current date and time
   };
   
+  // Wrap in try/catch for private browsing where localStorage may be unavailable
+  try {
+      // Get existing attempts or start with empty array
+      const existing = JSON.parse(localStorage.getItem('quizAttempts')) || [];
+
+      // Add new attempt
+      existing.push(attempt);
+
+      // Save back to localStorage
+      localStorage.setItem('quizAttempts', JSON.stringify(existing));
+  } catch (e) {
+      console.log('localStorage is not available: ' + e);
+    return;
+  }
 }
