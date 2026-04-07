@@ -240,3 +240,29 @@ function showResults(score, total, percentage, passed) {
   // Show attempt history
   showHistory();
 } 
+
+// Fetch a random joke from the API
+function fetchJoke() {
+  $('#reward-container').html('<p>Loading your reward...</p>'); // Show loading message
+
+  $.ajax({      // AJAX is an asyncronous method of fetching data from a server without refreshing the page (before async/await).
+    // Describe where and how to fetch the joke
+    url: 'https://official-joke-api.appspot.com/random_joke',
+    method: 'GET',
+    dataType: 'json',
+    // If successful...
+    success: function(data) {
+      const jokeHTML = `
+        <div class="reward-box">
+          <p class="reward-label">You passed! Here is your reward joke:</p>
+          <p class="joke-setup">${data.setup}</p>
+          <p class="joke-punchline">${data.punchline}</p>
+        </div>
+      `;
+      $('#reward-container').html(jokeHTML);    // Inject the joke into the page
+    },
+    error: function() {
+      $('#reward-container').html('<p>Could not load reward. But you still passed!</p>');
+    }
+  });
+}
