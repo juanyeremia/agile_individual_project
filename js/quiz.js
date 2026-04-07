@@ -193,7 +193,7 @@ function saveAttempt(score, total, percentage, passed) {
     total: total,
     percentage: percentage, 
     passed: passed,
-    timestamp: new Date().toISOString() // Save the current date and time
+    date: new Date().toLocaleString() // Save the current date and time
   };
   
   // Wrap in try/catch for private browsing where localStorage may be unavailable
@@ -265,4 +265,38 @@ function fetchJoke() {
       $('#reward-container').html('<p>Could not load reward. But you still passed!</p>');
     }
   });
+}
+
+// Show history
+function showHistory() {
+  try {
+    const attempts = JSON.parse(localStorage.getItem('quizAttempts')) || []
+
+    if(attempts.length == 0) {
+      $('#history-container').html('<p>No previous attempts.</p>');
+      return;
+    }
+
+    let historyHTML = '<h3>Attempt History</h3><table class="history-table"><thead><tr><th>Date</th><th>Score</th><th>Percentage</th><th>Result</th></tr></thead><tbody>';
+
+    // Loop through attempts and build table rows
+    attempts.forEach(function(attempt) {
+       historyHTML += `
+          <tr>
+              <td>${attempt.date}</td>
+              <td>${attempt.score} / ${attempt.total}</td>
+              <td>${attempt.percentage}%</td>
+              <td class="${attempt.passed ? 'result-pass' : 'result-fail'}">
+                ${attempt.passed ? 'PASS' : 'FAIL'}
+              </td>
+          </tr>
+      `;
+    });
+
+    historyHTML += '</tbody></table>';
+    $('#history-container').html(historyHTML);
+    
+  } catch(e) {
+    $('#history-container').html('<p>Could not load attempt history.</p>');
+  }
 }
