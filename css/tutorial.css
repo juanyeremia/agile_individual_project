@@ -1,3 +1,10 @@
+.intro {
+    color: var(--forest-nav);
+    border-bottom: 2px solid var(--forest-border);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
 /* Interactive Demo ------------------------------------------ */
 .demo-container {
     display: flex;        /* places editor and preview side by side */
