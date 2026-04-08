@@ -51,3 +51,31 @@
     background-color: #fff5f5;
 }
 
+/* Buttons */
+#start-btn, #submit-btn, #retry-btn, #clear-history-btn {
+    background-color: var(--forest-nav);
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+#start-btn:hover, #submit-btn:hover, #retry-btn:hover {
+    background-color: var(--forest-accent);
+}
+
+#clear-history-btn {
+    background-color: #dc2626;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    padding: 8px 20px;
+}
+
+#clear-history-btn:hover {
+    background-color: #b91c1c;
+}
