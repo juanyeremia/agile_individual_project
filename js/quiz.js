@@ -1,6 +1,6 @@
 /*
 1. On page load
-- AJAZ fetches quiz_questions.json from server
+- AJAX fetches quiz_questions.json from server
 - Store quiz questions in a variable
 - Wait for user to click "Start Quiz" button
 */
@@ -11,6 +11,8 @@ let hasStarted = false;
 
 // Fetch quiz questions on page load
 $(document).ready(function() {
+
+  // AJAX loads questions
   $.ajax({
     url: './data/quiz_questions.json',
     method: 'GET',
@@ -18,7 +20,6 @@ $(document).ready(function() {
     success:function(data) {
       // Store the loaded questions
       questions = data;
-      console.log('Questions loaded: ' + questions.length);
     },
     error: function() {
       $('#quiz-intro').html('<p>Error loading questions. Please try again.</p>');
@@ -28,6 +29,35 @@ $(document).ready(function() {
   // Start Quiz button click handler
   $('#start-btn').on('click', function() {
     startQuiz();
+  });
+
+  // Submit button
+  $('#submit-btn').on('click', function() {
+    submitQuiz();
+  });
+
+  // Retry button
+  $('#retry-btn').on('click', function(){
+    hasStarted = false;
+    window.onbeforeunload = null;
+
+    $('#results-container').empty();
+    $('#reward-container').empty();
+    $('#history-container').empty();
+
+    $('#quiz-results').hide();
+    startQuiz();
+  });
+
+  // Clear history button
+  $('#clear-history-btn').on('click', function() {
+    try {
+      localStorage.removeItem('quizAttempts');
+    } catch(e) {
+      console.warn('Could not clear history: ' + e);
+    }
+    $('#history-container').html('<p>History cleared.</p>');
+    $('#clear-history-btn').hide();
   });
 });
 
@@ -124,10 +154,6 @@ $(document).on('change', 'input[type=radio]', function() {          // use $(doc
 - Show restults
 - Fetch joke from API if passed
 */
-
-$('#submit-btn').on('click', function() {
-  submitQuiz();
-});
 
 function submitQuiz() {
   // Check all questions are answered
@@ -295,21 +321,10 @@ function showHistory() {
 
     historyHTML += '</tbody></table>';
     $('#history-container').html(historyHTML);
+    $('#clear-history-btn').show();
     
   } catch(e) {
     $('#history-container').html('<p>Could not load attempt history.</p>');
   }
 }
 
-// Retry button
-$('#retry-btn').on('click', function(){
-  hasStarted = false;
-  window.onbeforeunload = null;
-
-  $('#results-container').empty();
-  $('#reward-container').empty();
-  $('#history-container').empty();
-
-  $('#quiz-results').hide();
-  startQuiz();
-});
