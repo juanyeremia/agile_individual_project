@@ -25,7 +25,25 @@
     margin-bottom: 12px;
 }
 
+/* Options */
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
 
+.quiz-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--forest-accent);
+    cursor: pointer;
+}
+
+.quiz-option label {
+    cursor: pointer;
+    margin: 0;
+}
 
 /* Unanswered question highlight */
 .question-card.unanswered {
