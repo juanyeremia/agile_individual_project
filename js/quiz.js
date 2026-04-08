@@ -300,3 +300,16 @@ function showHistory() {
     $('#history-container').html('<p>Could not load attempt history.</p>');
   }
 }
+
+// Retry button
+$('#retry-btn').on('click', function(){
+  hasStarted = false;
+  window.onbeforeunload = null;
+
+  $('#results-container').empty();
+  $('#reward-container').empty();
+  $('#history-container').empty();
+
+  $('#quiz-results').hide();
+  startQuiz();
+});
