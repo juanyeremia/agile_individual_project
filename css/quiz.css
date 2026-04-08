@@ -133,3 +133,27 @@
     font-weight: 600;
     color: var(--forest-nav);
 }
+
+/* History table */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.history-table th {
+    background-color: var(--forest-nav);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.history-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--forest-border);
+}
+
+.history-table tr:last-child td {
+    border-bottom: none;
+}
