@@ -79,3 +79,32 @@
 #clear-history-btn:hover {
     background-color: #b91c1c;
 }
+
+* Results */
+#quiz-results h2 {
+    color: var(--forest-nav);
+    border-bottom: 2px solid var(--forest-border);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.result-score {
+    background-color: #f9f9f9;
+    border: 1px solid var(--forest-border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.result-pass {
+    color: var(--forest-accent);
+}
+
+.result-fail {
+    color: #dc2626;
+}
+
+.pass-threshold {
+    font-size: 0.85rem;
+    color: #666;
+}
