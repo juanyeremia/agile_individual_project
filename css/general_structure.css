@@ -152,6 +152,12 @@ h3 {
     overflow-x: auto;
 }
 
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+}
+
 .inline_code {
     background-color: var(--forest-accent-lt);
     color: var(--forest-code-bg);
