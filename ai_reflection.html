@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header_image">
+    <header class="temp_border header_image">
         <img 
         src="./assets/ai_header.jpg" 
         alt="A CG image representing AI" />
@@ -29,73 +29,82 @@
      <div id="navbar-placeholder"></div>
     
     <!-- Content -->
-    <section class="temp_border container-lg content_card">
-        <h1>How to Use This Website</h1>
-        <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-        <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-        <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-        <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-        <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-                <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-                <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-                <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-                <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-                <p>
-          This website is designed to provide you with a comprehensive guide on how to use the various features and functionalities it offers. Whether you're a new user or someone looking to explore more advanced options, this tutorial will walk you through the steps to make the most out of your experience.
-        </p>
-        <p>
-                To get started, simply navigate through the different sections of the website using the menu at the top. Each section is dedicated to a specific aspect of the website, such as account setup, content creation, and community engagement. You'll find detailed instructions, tips, and best practices to help you navigate and utilize each feature effectively.
-        </p>
-    </section>
+    <main class="temp_border container-lg content_card">
 
-    <!-- This Bootstrap's JS bundle script scans the page for data-bs-* attributes and attaches event listeners to them -->
+        <section id="introduction" class="temp_border">
+            <h2 class="temp_border intro">Introduction</h2>
+            <p class="justify_par">
+                Throughout this project I used Claude (by Anthropic) as an AI assistant 
+                to help guide my learning and implementation of HTML, CSS, and JavaScript. 
+                This page documents how I used AI it, what it produced, the 
+                corrections I made, and a critical evaluation of its limitations.
+            </p>
+        </section>
+
+        <section id="use-case-1" class="temp_border">
+            <h2 class="temp_border content_header">Use Case 1: Overall Theming System</h2>
+            <h3 class="temp_border">Prompt</h3>
+            <p class="temp_border justify_par">
+                I wanted to have a consistent look and across all four pages of the 
+        project. I consulted with Claude with the initial concept: 
+        <em>"I want to have consistent UI elements across the entire webpage. What would 
+        be the best way to do this? I was thinking like a header at the top, a navbar 
+        that has position sticky so it will stop at the top and follow the scroll, and 
+        the content below it as a card."</em> I had a barebones idea in mind and wanted 
+        guidance on how to structure it properly.
+            </p>
+
+            <h3 class="temp_border">What Claude Produced</h3>
+            <p class="justify_par">
+                Claude agreed with the general concept and extended it by suggesting a color 
+                theming system to keep UI elements visually consistent. It proposed a Forest 
+                Terminal color palette, with deep green, emerald, and pale green tones, and 
+                introduced me the use of CSS custom properties to implement it. Specifically, it 
+                suggested defining all colors once in a <code class="inline_code">:root</code> 
+                block using CSS variables like <code class="inline_code">--forest-nav</code>, 
+                <code class="inline_code">--forest-accent</code>, and 
+                <code class="inline_code">--forest-accent-lt</code>, then referencing them 
+                throughout the CSS using <code class="inline_code">var()</code>.
+                </p>        
+
+            <h3 class="temp_border">What I Changed</h3>
+            <p class="justify_par">
+        Claude initially suggested defining the <code class="inline_code">:root</code> 
+        variables inside <code class="inline_code">tutorial.css</code>. I immediately thought that it 
+        suggested to do this for each page's CSS. I thought that this would limit the variables to one specific page only, making them 
+        inaccessible to the other three pages. I decided it would be more efficient to 
+        have a general CSS file, <code class="inline_code">general_structure.css</code>, a shared 
+        stylesheet that will loaded by all four pages. This way the color system is defined once 
+        and available everywhere, while each page's CSS file only contains styles unique 
+        to that page. This decision reflects the separation of concerns principle covered 
+        in the CSS lecture.
+            </p>
+        </section>
+
+        <section id="use-case-2" class="temp_border">
+            <h2 class="temp_border" >Use Case 2: Quiz JavaScript Logic</h2>
+            <p class="temp_border justify_par">
+
+            </p>
+        </section>
+
+        <section id="use-case-3" class="temp_border">
+            <h2 class="temp_border" >Use Case 3: Debugging</h2>
+            <p class="temp_border justify_par">
+
+            </p>
+        </section>
+
+        <section id="critical-evaluation" class="temp_border">
+            <h2 class="temp_border">Critical Evaluation</h2>
+            <p class="temp_border justify_par">
+
+            </p>
+        </section>
+
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-     <!-- Connect page to main.js -->
     <script src="./js/main.js"></script>
 </body>
 </html>
