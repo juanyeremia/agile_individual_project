@@ -1,0 +1,15 @@
+.intro  {
+    color: var(--forest-nav);
+    border-bottom: 2px solid var(--forest-border);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+#use-case-1 h3, #use-case-2 h3, 
+#use-case-3 h3, #critical-evaluation h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a3a2a;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
