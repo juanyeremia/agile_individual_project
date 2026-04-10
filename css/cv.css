@@ -19,8 +19,6 @@
     object-position: top;
 }
 
-
-
 .bio-text {
     flex: 1;
 }
@@ -147,4 +145,32 @@
 
 #references a {
     color: var(--forest-accent);
+}
+
+/* Responsiveness --------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Bio — stack photo above text */
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-photo img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .bio-text {
+        width: 100%;
+    }
+
+    /* CV — stack left column above right column */
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .cv-left {
+        width: 100%;
+    }
 }
