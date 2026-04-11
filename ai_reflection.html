@@ -166,8 +166,38 @@
 
         <section id="critical-evaluation" class="temp_border">
             <h2 class="temp_border">Critical Evaluation</h2>
-            <p class="temp_border justify_par">
 
+            <h3>AI as a Collaborator</h3>
+            <p class="justify_par">
+                Throughout this project, Claude functioned most effectively as a collaborator 
+                rather than a replacement for my own thinking. The most productive interactions 
+                were not when I asked Claude to write something for me, but when I came with 
+                an idea or a problem and used Claude's response as a starting point. Final decisions 
+                on structure, naming conventions, which approach to use, and what to include were always made by me.
+            </p>
+
+            <h3>Where AI Added Genuine Value</h3>
+            <p class="justify_par">
+                Claude was particularly useful for identifying issues I would not have caught 
+                on my own. The <code class="inline_code">escapeHTML</code> fix for quiz answer 
+                options containing HTML tags, the event delegation pattern for dynamically 
+                created elements, and the CSS variable theming system were all suggestions that 
+                improved the quality of the project beyond what I would have 
+                produced myself. In these cases, AI did not just save time, it 
+                introduced approaches and patterns I was not yet aware of.
+            </p>
+
+            <h3>Risks and Limitations</h3>
+            <p class="justify_par">
+                The most significant risk of AI-assisted development i think is the temptation to 
+                accept output without understanding it. On several occasions Claude suggested 
+                approaches that went beyond the lecture material, such as the 
+                <code class="inline_code">iframe</code> sandbox for the interactive demo, 
+                a specific shuffle algorithm for the quiz, and <code class="inline_code">try/catch</code> 
+                for localStorage. Accepting these without question would have produced working 
+                code I would not be able to explain. Instead, I questioned each suggestion, asked Claude 
+                to explain the reasoning, and in some cases chose simpler alternatives that 
+                I could justify.
             </p>
         </section>
 
