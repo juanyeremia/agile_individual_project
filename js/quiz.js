@@ -49,15 +49,15 @@ $(document).ready(function() {
     startQuiz();
   });
 
-  // Clear history button
+  // Clear history 
   $('#clear-history-btn').on('click', function() {
-    try {
+    try {                                             // Will attempt to clear history
       localStorage.removeItem('quizAttempts');
-    } catch(e) {
+    } catch(e) {                                      // If failed for some reason
       console.warn('Could not clear history: ' + e);
     }
-    $('#history-container').html('<p>History cleared.</p>');
-    $('#clear-history-btn').hide();
+    $('#history-container').html('<p>History cleared.</p>');  // Produce output to HTML that says 'History cleared'
+    $('#clear-history-btn').hide();         // Hide Clear History button after clearing
   });
 });
 

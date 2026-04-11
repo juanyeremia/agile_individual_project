@@ -1,3 +1,4 @@
+/* Add simple bottom border to intro header */
 .intro  {
     color: var(--forest-nav);
     border-bottom: 2px solid var(--forest-border);
