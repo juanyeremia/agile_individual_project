@@ -150,7 +150,7 @@
                 <p class="temp_border note-label">Additional Note</p>
                 <p class="temp_border tutorial_par">Never leave <code class="inline_code">alt</code> empty 
                         unless the image is purely decorative. Screen readers skip empty alt attributes, but a 
-                        missing one entirely will read out the full file path — useless to a visually impaired user.
+                        missing one entirely will read out the full file path, which would ahve been useless to a visually impaired user.
                 </p>
                 </div>
 
@@ -272,8 +272,8 @@
                 <!-- CSS Overview -->
                  <p class="temp_border tutorial_par justify_par">
                         CSS stands for Cascading Style Sheets. It is the language that controls how HTML elements 
-                        look on screen. While HTML describes the structure and meaning of content, CSS 
-                        handles all visual presentation — colors, fonts, spacing, and layout. Keeping 
+                        look on screen. While HTML defines the structure and the content, CSS 
+                        handles all visual presentation, such as colors, fonts, spacing, and layout. Keeping 
                         these two concerns separate means you can restyle an entire website by changing 
                         one CSS file, without touching the HTML.
                 </p>
@@ -303,7 +303,7 @@
                         but defeat the purpose of CSS as you will lose the ability to update styles centrally. 
                         Always use external stylesheets in production. 
                         <br><br>
-                        The cascade order matters too: external styles load first, then document styles, then inline — each one can override the previous.</p>
+                        The cascade order matters too: external styles load first, then document styles, then inline. Each one can override the previous.</p>
                 </div>
 
                 <!-- 2.2. Selectors -->
@@ -314,17 +314,17 @@
                         priority. Meaning that these selectors will be prioritized when conflicts arise.
                 </p>
 
-<pre><code class="temp_border language-css code_snippet">* { }              /* universal — matches every element */
-p { }              /* element - matches all &lt;p&gt; tags */
-.card { }          /* class - matches elements with class="card" */
-#header { }        /* id - matches the element with id="header" */
-p:hover { }        /* pseudo-class - matches &lt;p&gt; on mouse hover */
+<pre><code class="temp_border language-css code_snippet">* { }              /* universal - matches every element */
+p { }              /* element (matches all &lt;p&gt; tags) */
+.card { }          /* class (matches elements with class="card") */
+#header { }        /* id (matches the element with id="header") */
+p:hover { }        /* pseudo-class (matches &lt;p&gt; on mouse hover) */
 
 /* Combinators */
-p b { }            /* descendant - any &lt;b&gt; inside a &lt;p&gt; */
-p > b { }          /* direct child - &lt;b&gt; directly inside &lt;p&gt; */
-h1 + h2 { }        /* direct sibling - &lt;h2&gt; immediately after &lt;h1&gt; */
-h1 ~ h2 { }        /* general sibling - any &lt;h2&gt; after &lt;h1&gt; */</code></pre>
+p b { }            /* descendant (any &lt;b&gt; inside a &lt;p&gt;) */
+p > b { }          /* direct child (&lt;b&gt; directly inside &lt;p&gt;) */
+h1 + h2 { }        /* direct sibling (&lt;h2&gt; immediately after &lt;h1&gt;) */
+h1 ~ h2 { }        /* general sibling (any &lt;h2&gt; after &lt;h1&gt;) */</code></pre>
 
                 <div class="temp_border additional-note">
                         <p class="temp_border note-label">Additional Note</p>
@@ -382,10 +382,10 @@ h1 ~ h2 { }        /* general sibling - any &lt;h2&gt; after &lt;h1&gt; */</code
                 </p>
 
 <pre><code class="temp_border language-css code_snippet">/* Specificity increases from top to bottom */
-p { color: black; }            /* element selector — lowest specificity */
-.intro { color: blue; }        /* class selector — beats element */
-#main { color: green; }        /* id selector — beats class */
-p { color: red !important; }   /* !important — overrides everything, use sparingly */</code></pre>
+p { color: black; }            /* element selector (lowest specificity) */
+.intro { color: blue; }        /* class selector (beats element) */
+#main { color: green; }        /* id selector (beats class) */
+p { color: red !important; }   /* !important (overrides everything, use sparingly) */</code></pre>
 
                 <div class="temp_border additional-note">
                 <p class="temp_border note-label">Additional Note</p>
@@ -405,17 +405,17 @@ p { color: red !important; }   /* !important — overrides everything, use spari
                 Each has its own use cases, but mastering them is key to controlling your page layout.
                 </p>
 
-<pre><code class="temp_border language-css code_snippet">/* 1. Float - shifts element left or right, text wraps around it */
+<pre><code class="temp_border language-css code_snippet">/* 1. Float: shifts element left or right, text wraps around it */
 img { float: right; }
 
-/* 2. Position - controls where an element sits */
+/* 2. Position: controls where an element sits */
 .box { position: static; }    /* default - normal flow */
 .box { position: relative; }  /* offset from its normal position */
 .box { position: absolute; }  /* removed from flow, positioned to nearest ancestor */
 .box { position: fixed; }     /* removed from flow, stays fixed to viewport */
 .box { position: sticky; }    /* switches between relative and fixed on scroll */
 
-/* 3. Display — changes how element participates in flow */
+/* 3. Display: changes how element participates in flow */
 span { display: block; }      /* makes inline element behave like a block */
 div  { display: inline; }     /* makes block element behave like inline */
 div  { display: flex; }       /* enables flexbox layout on children */</code></pre>
@@ -484,7 +484,7 @@ console.log(typeof text);   // "string"</code></pre>
                 <h3 class="temp_border content_header">3.2 Functions</h3>
                 <p class="temp_border tutorial_par justify_par">
                         Functions are reusable blocks of code. In JavaScript, functions are 
-                        first-class objects — they can be assigned to variables, passed as arguments, 
+                        first-class objects, meaning they can be assigned to variables, passed as arguments, 
                         and returned from other functions. There are two common ways to write them.
                 </p>
 
@@ -493,7 +493,7 @@ function greet(name) {
     return "Hello, " + name;
 }
 
-// Arrow function — shorter syntax, same result
+// Arrow function (shorter syntax, same result)
 const greet = (name) => "Hello, " + name;
 
 // Functions assigned to variables
@@ -625,7 +625,7 @@ $("#btn").on("click", function() {
     $("#output").text("Button clicked!");
 });
 
-// Chaining — apply multiple actions in one statement
+// Chaining (applying multiple actions in one statement)
 $("li").filter(".active").css("color", "green").show();</code></pre>
 
                 <div class="temp_border additional-note">
