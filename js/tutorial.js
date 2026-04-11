@@ -1,5 +1,5 @@
 // Wait for page to load fully before accessing DOM elements
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
   // References to textarea, button, and output div
   const input = $('#demo-input');
   const runBtn = $('#run-btn');
