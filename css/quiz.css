@@ -80,7 +80,7 @@
     background-color: #b91c1c;
 }
 
-* Results */
+/* Results */
 #quiz-results h2 {
     color: var(--forest-nav);
     border-bottom: 2px solid var(--forest-border);

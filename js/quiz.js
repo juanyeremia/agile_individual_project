@@ -102,14 +102,13 @@ function renderQuestions() {
     q.options.forEach(function(option, optIndex) {
       // Load quesition
       optionsHTML += `
-        <div class="temp_border quiz-option">
+        <div class="quiz-option">
           <input
-            class="temp_border"
             type="radio"
             name="question-${index}"
             id="q${index}-opt${optIndex}"
             value="${optIndex}">
-          <label for="q${index}-opt${optIndex}" class="temp_border">${escapeHTML(option)}</label>
+          <label for="q${index}-opt${optIndex}">${escapeHTML(option)}</label>
         </div>
       `;
     });
