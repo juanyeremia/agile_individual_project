@@ -83,8 +83,8 @@
 
         <section id="use-case-2" class="temp_border">
             <h2 class="temp_border" >Use Case 2: Interactive Demo</h2>
-            <p class="temp_border justify_par">
-                <h3>Prompt</h3>
+           
+            <h3>Prompt</h3>
             <p class="justify_par">
                 After building the tutorial content, I wanted to add an interactive element 
                 to the page as it was required by the rubric. I had no prior experience building 
@@ -124,13 +124,43 @@
                 <code class="inline_code">output.innerHTML</code> with 
                 <code class="inline_code">output.html()</code>.
             </p>
-            
         </section>
 
         <section id="use-case-3" class="temp_border">
             <h2 class="temp_border" >Use Case 3: Debugging</h2>
-            <p class="temp_border justify_par">
+            <h3>Prompt</h3>
+            <p class="justify_par">
+                Throughout the project I used Claude as a debugging companion. My typical 
+                workflow was to implement code, test it in the browser, and when something 
+                didn't work as expected I would share a screenshot or paste the relevant 
+                code and describe the problem. Claude would identify the issue and suggest 
+                a fix, which I would then implement and verify before continuing.
+            </p>
 
+            <h3>What Claude Produced</h3>
+            <p class="justify_par">
+                Claude identified a range of bugs across the project. For example, there was 
+                a typo where a CSS class was written as <code class="inline_code">into_par</code> 
+                instead of <code class="inline_code">intro_par</code> in the HTML, causing the 
+                justify style to not apply. In the quiz page, Claude identified that HTML entities 
+                like <code class="inline_code">&lt;nav&gt;</code> and 
+                <code class="inline_code">&lt;div&gt;</code> used as answer options were being 
+                parsed as actual HTML tags rather than displayed as text, causing them to dissapear. It suggested writing 
+                an <code class="inline_code">escapeHTML()</code> function to make the output appear as text
+                before injecting it into the DOM. Claude also caught a missing dot in a jQuery 
+                selector where <code class="inline_code">$('question-card')</code> should have 
+                been <code class="inline_code">$('.question-card')</code>.
+            </p>
+
+            <h3>What I Changed</h3>
+            <p class="justify_par">
+                In most cases I implemented Claude's suggested fixes directly after understanding 
+                the cause of the bug. However, not all bugs were caught by Claude initially.  
+                Several bugs were only identified after I asked it about unexpected behaviour in the browser that i could not figure out by myself. 
+                This highlights an important limitation, that Claude could not run or test the code 
+                itself, meaning I was responsible for executing, observing, and reporting issues. 
+                The debugging process was collaborative. Claude provided the diagnosis, 
+                but I was the one running the tests and confirming whether the fix worked.
             </p>
         </section>
 
