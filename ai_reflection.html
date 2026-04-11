@@ -82,10 +82,49 @@
         </section>
 
         <section id="use-case-2" class="temp_border">
-            <h2 class="temp_border" >Use Case 2: Quiz JavaScript Logic</h2>
+            <h2 class="temp_border" >Use Case 2: Interactive Demo</h2>
             <p class="temp_border justify_par">
-
+                <h3>Prompt</h3>
+            <p class="justify_par">
+                After building the tutorial content, I wanted to add an interactive element 
+                to the page as it was required by the rubric. I had no prior experience building 
+                interactive components from scratch, so I asked Claude how to create a live 
+                HTML editor where users could type HTML and see it rendered in real time.
             </p>
+
+            <h3>What Claude Produced</h3>
+            <p class="justify_par">
+                Claude broke down the component into two parts, the HTML structure and the 
+                JavaScript logic. For the HTML, it suggested to create two containers side by side, using flexbox
+                with one side being the input area and the right side being the output. It suggested usign
+                <code class="inline_code">&lt;textarea&gt;</code> for user input, a Run button, 
+                and an output <code class="inline_code">&lt;div&gt;</code> to display the result. 
+                For the JavaScript, it explained how i can display the input as HTML by putting 
+                <code class="inline_code">addEventListener</code> on the button that listens for a 
+                click event, retrieves the textarea's current value, and writes it into the 
+                output div using <code class="inline_code">innerHTML</code>, causing the browser 
+                to parse and render the typed HTML live. Claude also explained why each element 
+                was needed and how they connected, rather than just providing the code.
+            </p>
+
+            <h3>What I Changed</h3>
+            <p class="justify_par">
+                Claude initially suggested using an <code class="inline_code">&lt;iframe&gt;</code> 
+                to sandbox the output, which would have required accessing 
+                <code class="inline_code">contentDocument</code>, which was a method not covered in the 
+                lectures. I raised this concern and Claude offered a simpler alternative using 
+                <code class="inline_code">innerHTML</code> on a plain 
+                <code class="inline_code">&lt;div&gt;</code>, which achieved the same visual 
+                result using only DOM manipulation techniques from the JavaScript lectures. 
+                Claude also initially wrote the implementation in vanilla JavaScript using 
+                <code class="inline_code">document.getElementById</code> and 
+                <code class="inline_code">innerHTML</code>. I independently converted this to 
+                jQuery by replacing <code class="inline_code">document.getElementById('demo-input')</code> 
+                with <code class="inline_code">$('#demo-input')</code> and 
+                <code class="inline_code">output.innerHTML</code> with 
+                <code class="inline_code">output.html()</code>.
+            </p>
+            
         </section>
 
         <section id="use-case-3" class="temp_border">
