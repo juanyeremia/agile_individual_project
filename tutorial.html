@@ -14,7 +14,7 @@
 </head>
 <body class="justify-content-center">
     <!-- Header -->
-    <header class="temp_border header_image">
+    <header class=" header_image">
         <img 
         src="./assets/tutorial_header.jpg" 
         alt="Picture of an HTML code snippet on a computer" />
@@ -26,25 +26,25 @@
     <div id="navbar-placeholder"></div>
     
     <!-- Content -->
-    <main class="temp_border container-lg content_card">
+    <main class=" container-lg content_card">
         <!-- Introduction -->
-        <section id="tutorial-intro" class="temp_border">
-                <h2 class="temp_border intro">Welcome to the tutorial!</h2>
-                <p class="temp_border intro_par justify_par">
+        <section id="tutorial-intro" class="">
+                <h2 class=" intro">Welcome to the tutorial!</h2>
+                <p class=" intro_par justify_par">
                         This tutorial is designed to help you learn the basics of Website Development using three core web technologies: HTML, CSS, and Javascript. Click on the links below to jump to each topic, or read through the tutorial in order.
                 </p>
-                <ul class="temp_border intro_tutorial_list">
-                        <li class="temp_border intro_tutorial_list_item"><a href="#html">HTML</a></li>
-                        <li class="temp_border intro_tutorial_list_item"><a href="#css">CSS</a></li>
-                        <li class="temp_border intro_tutorial_list_item"><a href="#javascript">JavaScript</a></li>
+                <ul class=" intro_tutorial_list">
+                        <li class=" intro_tutorial_list_item"><a href="#html">HTML</a></li>
+                        <li class=" intro_tutorial_list_item"><a href="#css">CSS</a></li>
+                        <li class=" intro_tutorial_list_item"><a href="#javascript">JavaScript</a></li>
                 </ul>
         </section>
 
         <!-- Main Content -->
-        <section id="html" class="temp_border ">
-                <h2 class="temp_border content_header">HTML</h2>
+        <section id="html" class=" ">
+                <h2 class=" content_header">HTML</h2>
                 <!-- HTML Overview -->
-                <p class="temp_border tutorial_par justify_par">
+                <p class=" tutorial_par justify_par">
                         HTML stands for HyperText Markup Language. 
                         It is the standard markup language used to create web pages. 
                         HTML describes <b>the structure of a web page</b> using a series of <b>elements and tags</b>. 
@@ -54,33 +54,33 @@
                 </p>
                 
                 <!-- HTML5 Philosophy -->
-                <h3 class="temp_border content_header">1.1 HTML5 Philosophy</h3>
-                <ol class="temp_border">
-                        <li class="temp_border">
-                                <p class="temp_border"><b>Interoperability</b> - should be renderable on a wide variety of browser.</p>
+                <h3 class=" content_header">1.1 HTML5 Philosophy</h3>
+                <ol class="">
+                        <li class="">
+                                <p class=""><b>Interoperability</b> - should be renderable on a wide variety of browser.</p>
                         </li>
-                        <li class="temp_border">
-                                <p class="temp_border"><b>Graceful error recovery</b> - small errors should not stop the page from rendering.</p>
+                        <li class="">
+                                <p class=""><b>Graceful error recovery</b> - small errors should not stop the page from rendering.</p>
                         </li>
-                        <li class="temp_border">
-                                <p class="temp_border"><b>Backwards compatibility</b> - new features should not break the web.</p>
+                        <li class="">
+                                <p class=""><b>Backwards compatibility</b> - new features should not break the web.</p>
                         </li>
-                        <li class="temp_border">
-                                <p class="temp_border"><b>Prioritize users</b> - User > Web dev > browser implementer > theorists</p>
+                        <li class="">
+                                <p class=""><b>Prioritize users</b> - User > Web dev > browser implementer > theorists</p>
                         </li>
-                        <li class="temp_border">
-                                <p class="temp_border"><b>Separation of concerns</b> - describe the type of information, not how it displays.</p>
+                        <li class="">
+                                <p class=""><b>Separation of concerns</b> - describe the type of information, not how it displays.</p>
                         </li>
                 </ol>
                 
                 <!-- 1.1. Document Structure -->
-                <h3 class="temp_border content_header">1.2. Document Structure</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">1.2. Document Structure</h3>
+                <p class=" tutorial_par justify_par">
                         Every HTML document follows the same skeleton. The <code class="inline_code">&lt;!DOCTYPE html&gt;</code> declaration tells the browser this is an HTML5 document. Inside the <code class="inline_code">&lt;html&gt;</code> root element sit exactly two children, which are <code class="inline_code">&lt;head&gt;</code> for metadata like the page title and CSS links, and <code class="inline_code">&lt;body&gt;</code> for everything visible on the page.    
                 </p>
                 
                 <!-- Code snippet for document structure -->
-<pre><code class="temp_border language-html code_snippet">&lt;!DOCTYPE html&gt;
+<pre><code class=" language-html code_snippet">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -93,15 +93,15 @@
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-                 <div class=" temp_border additional-note">
-                        <p class="temp_border  note-label">Additional Note</p>
+                 <div class="  additional-note">
+                        <p class="  note-label">Additional Note</p>
                         <p>Always include <code class="inline_code">lang="en"</code> on the <code class="inline_code">&lt;html&gt;</code> tag. Screen readers use it to select the correct pronunciation engine, and search engines use it to serve the right audience.
                         </p>
                 </div>
 
                 <!-- 1.3 Common Elements -->
-                <h3 class="temp_border content_header">1.3 Common Elements</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">1.3 Common Elements</h3>
+                <p class=" tutorial_par justify_par">
                         HTML provides a set of elements for structuring text content. Headings range from 
                         <code class="inline_code">&lt;h1&gt;</code> (most important) to <code class="inline_code">&lt;h6&gt;</code> 
                         (least important) and should follow a logical hierarchy. It is good practice to follow the heading hierarchy. Paragraphs use 
@@ -111,7 +111,7 @@
                 </p>
                 
 
-<pre><code class="temp_border language-html code_snippet">&lt;h1&gt;Main heading&lt;/h1&gt;
+<pre><code class=" language-html code_snippet">&lt;h1&gt;Main heading&lt;/h1&gt;
 &lt;h2&gt;Subheading&lt;/h2&gt;
 &lt;p&gt;A paragraph with &lt;em&gt;emphasis&lt;/em&gt; and &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
 
@@ -128,8 +128,8 @@
 &lt;/ol&gt;</code></pre>
 
                 <!-- 1.4 Links and Images -->
-                <h3 class="temp_border content_header">1.4 Links and Images</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">1.4 Links and Images</h3>
+                <p class=" tutorial_par justify_par">
                 Links are created with the <code class="inline_code">&lt;a&gt;</code> tag using the 
                 <code class="inline_code">href</code> attribute. When <strong>linking within your own site</strong> always 
                 use <strong>relative paths</strong> so that they won't break if you move the project to a different 
@@ -137,7 +137,7 @@
                 always need an <code class="inline_code">alt</code> attribute for accessibility.
                 </p>
 
-<pre><code class="temp_border language-html code_snippet">&lt;!-- Relative link (same site) --&gt;
+<pre><code class=" language-html code_snippet">&lt;!-- Relative link (same site) --&gt;
 &lt;a href="./quiz.html"&gt;Go to Quiz&lt;/a&gt;
 
 &lt;!-- Absolute link (external site) --&gt;
@@ -146,23 +146,23 @@
 &lt;!-- Image with alt text --&gt;
 &lt;img src="./assets/photo.jpg" alt="Description of the image"&gt;</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">Never leave <code class="inline_code">alt</code> empty 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">Never leave <code class="inline_code">alt</code> empty 
                         unless the image is purely decorative. Screen readers skip empty alt attributes, but a 
                         missing one entirely will read out the full file path, which would ahve been useless to a visually impaired user.
                 </p>
                 </div>
 
                 <!-- 1.5 Tables -->
-                 <h3 class="temp_border content_header">1.5 Tables</h3>
-                <p class="temp_border tutorial_par justify_par">
+                 <h3 class=" content_header">1.5 Tables</h3>
+                <p class=" tutorial_par justify_par">
                         Tables are used to display data in rows and columns. The <code class="inline_code">&lt;table&gt;</code> 
                         element wraps everything. Each row uses <code class="inline_code">&lt;tr&gt;</code>, header cells use 
                         <code class="inline_code">&lt;th&gt;</code>, and data cells use <code class="inline_code">&lt;td&gt;</code>.
                 </p>
 
-<pre><code class="temp_border language-html code_snippet">&lt;table&gt;
+<pre><code class=" language-html code_snippet">&lt;table&gt;
   &lt;tr&gt; &lt;!-- header row --&gt;
     &lt;th&gt;Name&lt;/th&gt; &lt;!-- header column --&gt;
     &lt;th&gt;Age&lt;/th&gt;  &lt;!-- header column --&gt;
@@ -177,21 +177,21 @@
   &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">Only use tables for tabular data, never to layout a page. Tables used for layout will break screen readers, are hard to maintain, 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">Only use tables for tabular data, never to layout a page. Tables used for layout will break screen readers, are hard to maintain, 
                 and can render unpredictably across browsers. Use CSS <strong>flexbox</strong> or <strong>grid</strong> for layout instead.</p>
                 </div>
 
                 <!-- 1.6 Semantic Elements -->
-                <h3 class="temp_border content_header">1.6 Semantic Elements</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">1.6 Semantic Elements</h3>
+                <p class=" tutorial_par justify_par">
                 HTML5 introduced purpose-built layout elements that tells us their meaning rather than just 
                 grouping content. Using these correctly will improve accessibility and helps search engines 
                 understand your page structure.
                 </p>
 
-<pre><code class="temp_border language-html code_snippet">&lt;header&gt;Site logo and title&lt;/header&gt;
+<pre><code class=" language-html code_snippet">&lt;header&gt;Site logo and title&lt;/header&gt;
 &lt;nav&gt;Navigation links&lt;/nav&gt;
 &lt;main&gt;
   &lt;section&gt;A thematic group of content&lt;/section&gt;
@@ -200,17 +200,17 @@
 &lt;/main&gt;
 &lt;footer&gt;Copyright and links&lt;/footer&gt;</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">Use <code class="inline_code">&lt;section&gt;</code> if you want it included in a table of contents. Use 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">Use <code class="inline_code">&lt;section&gt;</code> if you want it included in a table of contents. Use 
                         <code class="inline_code">&lt;article&gt;</code> if it can stand alone and be republished elsewhere. 
                         Use <code class="inline_code">&lt;div&gt;</code> if you are just wrapping something for styling.
                 </p>
                 </div>
 
                  <!-- 1.7 Forms -->
-                <h3 class="temp_border content_header">1.7 Forms</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">1.7 Forms</h3>
+                <p class=" tutorial_par justify_par">
                 Forms collect user input and send it to a server. The <code class="inline_code">&lt;form&gt;</code> 
                 element wraps all inputs. The <code class="inline_code">action</code> attribute sets where the 
                 data is sent, and <code class="inline_code">method</code> controls how the data is sent. The <code class="inline_code">GET</code> 
@@ -220,7 +220,7 @@
                 <code class="inline_code">for</code> that matches with the <code class="inline_code">id</code> attributes inside the pairing <code class="inline_code">&lt;input&gt;</code> for accessibility.
                 </p>
 
-<pre><code class="temp_border language-html code_snippet">&lt;form action="/submit" method="post"&gt;
+<pre><code class=" language-html code_snippet">&lt;form action="/submit" method="post"&gt;
   &lt;label for="name"&gt;Name&lt;/label&gt;          &lt;!-- linked to input below via id --&gt;
   &lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;
 
@@ -233,9 +233,9 @@
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">The <code class="inline_code">type</code> 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">The <code class="inline_code">type</code> 
                 attribute on inputs matters beyond just validation On mobile devices, 
                 <code class="inline_code">type="email"</code> brings up a keyboard with the <b>@</b> symbol.
                 <code class="inline_code">type="number"</code> brings up a number pad. This is 
@@ -243,8 +243,8 @@
                 </div>
 
                 <!-- 1.8 Form Validation -->
-                <h3 class="temp_border content_header">1.8 Form Validation</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">1.8 Form Validation</h3>
+                <p class=" tutorial_par justify_par">
                 HTML provides basic built-in validation through input attributes. The 
                 <code class="inline_code">required</code> attribute prevents empty submissions, 
                 <code class="inline_code">minlength</code> and <code class="inline_code">maxlength</code> 
@@ -254,23 +254,23 @@
                 remove the validation attributes. Always validate on the server too.
                 </p>
 
-<pre><code class="temp_border langua ge-html code_snippet">&lt;input type="text" required minlength="3" maxlength="20"&gt;   &lt;!-- text length rules --&gt;
+<pre><code class=" langua ge-html code_snippet">&lt;input type="text" required minlength="3" maxlength="20"&gt;   &lt;!-- text length rules --&gt;
 &lt;input type="number" min="1" max="100"&gt;                      &lt;!-- numeric range --&gt;
 &lt;input type="email"&gt;                                         &lt;!-- format auto-validated --&gt;</code></pre>
 
-                <div class="temp_border additional-note">
-                        <p class="temp_border note-label">Additional Note</p>
-                        <p class="temp_border tutorial_par"><b>Client-side validation</b> is for <b>user experience</b>. It gives instant feedback without a server round-trip. <b>Server-side validation</b> is for 
+                <div class=" additional-note">
+                        <p class=" note-label">Additional Note</p>
+                        <p class=" tutorial_par"><b>Client-side validation</b> is for <b>user experience</b>. It gives instant feedback without a server round-trip. <b>Server-side validation</b> is for 
                         security.</p>
                 </div>    
         </section>
 
 <!-- CSS -->
-        <section id="css" class="temp_border">
-                <h2 class="temp_border content_header">2. CSS</h2>
+        <section id="css" class="">
+                <h2 class=" content_header">2. CSS</h2>
                 
                 <!-- CSS Overview -->
-                 <p class="temp_border tutorial_par justify_par">
+                 <p class=" tutorial_par justify_par">
                         CSS stands for Cascading Style Sheets. It is the language that controls how HTML elements 
                         look on screen. While HTML defines the structure and the content, CSS 
                         handles all visual presentation, such as colors, fonts, spacing, and layout. Keeping 
@@ -279,14 +279,14 @@
                 </p>
 
                 <!-- 2.1. Three ways to apply CSS -->
-                <h3 class="temp_border content_header">2.1 Three Ways to Apply CSS</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">2.1 Three Ways to Apply CSS</h3>
+                <p class=" tutorial_par justify_par">
                         There are 3 ways to appy CSS into HTML, each with a different scope. 
                         <b>Inline styles</b> apply to a single element, <b>document styles</b> apply to the whole 
                         page, and <b>external stylesheets</b> can be shared across many pages.
                 </p>
 
-<pre><code class="temp_border language-html code_snippet">&lt;!-- 1. Inline - applies to this element only. --&gt;
+<pre><code class=" language-html code_snippet">&lt;!-- 1. Inline - applies to this element only. --&gt;
 &lt;p style="color: red; font-size: 18px;"&gt;Hello&lt;/p&gt;
 
 &lt;!-- 2. Document - inside &lt;head&gt;, applies to whole page --&gt;
@@ -297,9 +297,9 @@
 &lt;!-- 3. External - preferred approach, reusable across pages --&gt;
 &lt;link rel="stylesheet" href="./css/style.css"&gt;</code></pre>
 
-                <div class="temp_border additional-note">
-                        <p class="temp_border note-label">Additional Note</p>
-                        <p class="temp_border tutorial_par">Inline styles are useful for quick debugging 
+                <div class=" additional-note">
+                        <p class=" note-label">Additional Note</p>
+                        <p class=" tutorial_par">Inline styles are useful for quick debugging 
                         but defeat the purpose of CSS as you will lose the ability to update styles centrally. 
                         Always use external stylesheets in production. 
                         <br><br>
@@ -307,14 +307,14 @@
                 </div>
 
                 <!-- 2.2. Selectors -->
-                <h3 class="temp_border content_header">2.2 Selectors</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">2.2 Selectors</h3>
+                <p class=" tutorial_par justify_par">
                         A selector determines which HTML elements a CSS rule is being applied to. CSS has several 
                         types of selector that ranges from based on precision. The more specific the selector, the higher its 
                         priority. Meaning that these selectors will be prioritized when conflicts arise.
                 </p>
 
-<pre><code class="temp_border language-css code_snippet">* { }              /* universal - matches every element */
+<pre><code class=" language-css code_snippet">* { }              /* universal - matches every element */
 p { }              /* element (matches all &lt;p&gt; tags) */
 .card { }          /* class (matches elements with class="card") */
 #header { }        /* id (matches the element with id="header") */
@@ -326,16 +326,16 @@ p > b { }          /* direct child (&lt;b&gt; directly inside &lt;p&gt;) */
 h1 + h2 { }        /* direct sibling (&lt;h2&gt; immediately after &lt;h1&gt;) */
 h1 ~ h2 { }        /* general sibling (any &lt;h2&gt; after &lt;h1&gt;) */</code></pre>
 
-                <div class="temp_border additional-note">
-                        <p class="temp_border note-label">Additional Note</p>
-                        <p class="temp_border tutorial_par">Use class selectors more often over IDs for styling if possible. IDs have 
+                <div class=" additional-note">
+                        <p class=" note-label">Additional Note</p>
+                        <p class=" tutorial_par">Use class selectors more often over IDs for styling if possible. IDs have 
                         higher specificity which makes them harder to override later, and each ID can only 
                         appear once per page. Classes are reusable and easier to manage in large projects.</p>
                 </div>
 
                 <!-- 2.3. The Box Model -->
-                <h3 class="temp_border content_header">2.3 The Box Model</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">2.3 The Box Model</h3>
+                <p class=" tutorial_par justify_par">
                 Every HTML element is treated as a rectangular box made up of four layers. 
                 From inside out: the <code class="inline_code">content</code> is the actual 
                 text or image, <code class="inline_code">padding</code> is the space between 
@@ -345,14 +345,14 @@ h1 ~ h2 { }        /* general sibling (any &lt;h2&gt; after &lt;h1&gt;) */</code
                 controlling spacing and layout.
                 </p>
 
-                <figure class="temp_border text-center">
+                <figure class=" text-center">
                 <img src="./assets/box_model.png" 
                         alt="Diagram of the CSS box model showing content, padding, border and margin layers"
                         class="img-fluid">
                 <figcaption>Figure: The CSS Box Model</figcaption>
                 </figure>
 
-<pre><code class="temp_border language-css code_snippet">.box {
+<pre><code class=" language-css code_snippet">.box {
   width: 200px;         /* content width */
   padding: 20px;        /* space between the content and the border */
   border: 2px solid #333; /* the border itself */
@@ -361,9 +361,9 @@ h1 ~ h2 { }        /* general sibling (any &lt;h2&gt; after &lt;h1&gt;) */</code
   /* Total rendered width = 200 + 20 + 20 + 2 + 2 = 244px */
 }</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">By default, <code class="inline_code">width</code> 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">By default, <code class="inline_code">width</code> 
                 only sets the content area, while padding and border are added on top, which often produces 
                 unexpected widths. Add <code class="inline_code">box-sizing: border-box</code> to make 
                 the width include padding and border, which is far more intuitive. Many developers apply 
@@ -371,8 +371,8 @@ h1 ~ h2 { }        /* general sibling (any &lt;h2&gt; after &lt;h1&gt;) */</code
                 </div>
 
                 <!-- 2.4 Cascade and Specificity -->
-                <h3 class="temp_border content_header">2.4 Cascade and Specificity</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">2.4 Cascade and Specificity</h3>
+                <p class=" tutorial_par justify_par">
                 When multiple CSS rules target the same element, the browser needs to decide 
                 which one wins. It follows three steps in order: first it checks 
                 <code class="inline_code">origin</code> (author styles beat browser defaults), 
@@ -381,15 +381,15 @@ h1 ~ h2 { }        /* general sibling (any &lt;h2&gt; after &lt;h1&gt;) */</code
                 everything else is equal).
                 </p>
 
-<pre><code class="temp_border language-css code_snippet">/* Specificity increases from top to bottom */
+<pre><code class=" language-css code_snippet">/* Specificity increases from top to bottom */
 p { color: black; }            /* element selector (lowest specificity) */
 .intro { color: blue; }        /* class selector (beats element) */
 #main { color: green; }        /* id selector (beats class) */
 p { color: red !important; }   /* !important (overrides everything, use sparingly) */</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">Avoid using <code class="inline_code">!important</code> 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">Avoid using <code class="inline_code">!important</code> 
                 as a habit as it breaks the natural cascade and makes debugging much harder. If you find 
                 yourself reaching for it often, it usually means your selectors are poorly structured. 
                 The fix is to write more specific selectors, not override everything with 
@@ -397,15 +397,15 @@ p { color: red !important; }   /* !important (overrides everything, use sparingl
                 </div>
 
                 <!-- 2.5 Layout -->
-                <h3 class="temp_border content_header">2.5 Layout</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">2.5 Layout</h3>
+                <p class=" tutorial_par justify_par">
                 By default, <b>block</b> elements stack vertically and <b>inline</b> elements flow horizontally. 
                 CSS gives you three main tools to override this default flow: <code class="inline_code">float</code>, 
                 <code class="inline_code">position</code>, and <code class="inline_code">display</code>. 
                 Each has its own use cases, but mastering them is key to controlling your page layout.
                 </p>
 
-<pre><code class="temp_border language-css code_snippet">/* 1. Float: shifts element left or right, text wraps around it */
+<pre><code class=" language-css code_snippet">/* 1. Float: shifts element left or right, text wraps around it */
 img { float: right; }
 
 /* 2. Position: controls where an element sits */
@@ -420,9 +420,9 @@ span { display: block; }      /* makes inline element behave like a block */
 div  { display: inline; }     /* makes block element behave like inline */
 div  { display: flex; }       /* enables flexbox layout on children */</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par"><code class="inline_code">position: sticky</code> 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par"><code class="inline_code">position: sticky</code> 
                 is what makes your navbar stay at the top of the screen as you scroll. It behaves 
                 like <code class="inline_code">relative</code> until the element reaches the top of 
                 the viewport, then switches to <code class="inline_code">fixed</code>. This is exactly 
@@ -431,10 +431,10 @@ div  { display: flex; }       /* enables flexbox layout on children */</code></p
         </section>
 
 <!-- JS -->
-        <section id="javascript" class="temp_border">
-                <h2 class="temp_border content_header">3. JavaScript</h2>
+        <section id="javascript" class="">
+                <h2 class=" content_header">3. JavaScript</h2>
                 <!-- JS Overview -->
-                <p class="temp_border tutorial_par justify_par">
+                <p class=" tutorial_par justify_par">
                         JavaScript is a high-level, interpreted programming language that runs directly 
                         in the browser. While HTML defines structure and CSS defines appearance, JavaScript 
                         adds behaviour that makes pages respond to user actions, update content dynamically, 
@@ -442,8 +442,8 @@ div  { display: flex; }       /* enables flexbox layout on children */</code></p
                 </p>
 
                 <!-- 3.1. Variables and Data Types -->
-                <h3 class="temp_border content_header">3.1 Variables and Types</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">3.1 Variables and Types</h3>
+                <p class=" tutorial_par justify_par">
                         JavaScript has three ways to declare variables. <code class="inline_code">const</code>, <code class="inline_code">let</code>, <code class="inline_code">var</code>. 
                         Use <code class="inline_code">const</code> by default as it "locks" the variable, preventing it from being reassigned accidentally. 
                         
@@ -454,7 +454,7 @@ div  { display: flex; }       /* enables flexbox layout on children */</code></p
                         meaning a variable can hold any type and its type can change at runtime.
                 </p>
 
-<pre><code class="temp_border language-javascript code_snippet">const name = "Juan";        // cannot be reassigned
+<pre><code class=" language-javascript code_snippet">const name = "Juan";        // cannot be reassigned
 let age = 21;               // can be reassigned
 age = 22;                   // fine with let
 
@@ -469,9 +469,9 @@ let notDefined;             // undefined (no value assigned yet)
 console.log(typeof num);    // "number"
 console.log(typeof text);   // "string"</code></pre>
 
-                <div class="temp_border additional-note">
-                        <p class="temp_border note-label">Additional Note</p>
-                        <p class="temp_border tutorial_par">JavaScript will try to <b>convert types automatically</b> 
+                <div class=" additional-note">
+                        <p class=" note-label">Additional Note</p>
+                        <p class=" tutorial_par">JavaScript will try to <b>convert types automatically</b> 
                         when performing operations. This is called <b>implicit type coercion</b>. It can produce 
                         surprising results: <code class="inline_code">"5" + 3</code> gives 
                         <code class="inline_code">"53"</code> (string concatenation), but 
@@ -481,14 +481,14 @@ console.log(typeof text);   // "string"</code></pre>
                 </div>
 
                 <!-- 3.2. Functions -->
-                <h3 class="temp_border content_header">3.2 Functions</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">3.2 Functions</h3>
+                <p class=" tutorial_par justify_par">
                         Functions are reusable blocks of code. In JavaScript, functions are 
                         first-class objects, meaning they can be assigned to variables, passed as arguments, 
                         and returned from other functions. There are two common ways to write them.
                 </p>
 
-<pre><code class="temp_border language-javascript code_snippet">// Function declaration
+<pre><code class=" language-javascript code_snippet">// Function declaration
 function greet(name) {
     return "Hello, " + name;
 }
@@ -504,9 +504,9 @@ const add = function(a, b) {
 console.log(greet("Juan"));  // "Hello, Juan"
 console.log(add(3, 4));      // 7</code></pre>
 
-                <div class="temp_border additional-note">
-                        <p class="temp_border note-label">Additional Note</p>
-                        <p class="temp_border tutorial_par">Accessing a function without 
+                <div class=" additional-note">
+                        <p class=" note-label">Additional Note</p>
+                        <p class=" tutorial_par">Accessing a function without 
                         <code class="inline_code">()</code> returns the function itself, not its result. 
                         For example, <code class="inline_code">greet</code> gives you the function definition, 
                         while <code class="inline_code">greet("Juan")</code> calls it and gives you 
@@ -515,15 +515,15 @@ console.log(add(3, 4));      // 7</code></pre>
                 </div>
 
                 <!-- 3.3 The DOM -->
-                <h3 class="temp_border content_header">3.3 The DOM</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">3.3 The DOM</h3>
+                <p class=" tutorial_par justify_par">
                 When a browser loads an HTML page it builds a  <b>tree structure</b> in memory called the 
                 Document Object Model (DOM). <b>Every HTML element becomes a node in this tree.</b> 
                 JavaScript can access and modify these nodes, like changing text, attributes, styles, 
                 or even adding and removing elements entirely without reloading the page.
                 </p>
 
-<pre><code class="temp_border language-javascript code_snippet">// Accessing elements
+<pre><code class=" language-javascript code_snippet">// Accessing elements
 const heading = document.getElementById("main-title");      // by id
 const paragraphs = document.getElementsByTagName("p");      // all &lt;p&gt; elements
 const cards = document.getElementsByClassName("card");      // by class
@@ -545,9 +545,9 @@ const newPara = document.createElement("p");
 newPara.textContent = "This was added by JavaScript";
 document.body.appendChild(newPara);</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">Prefer <code class="inline_code">textContent</code> 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">Prefer <code class="inline_code">textContent</code> 
                 over <code class="inline_code">innerHTML</code> when you are only inserting plain text. 
                 Using <code class="inline_code">innerHTML</code> with user-supplied input is a security 
                 risk. A malicious user could inject script tags and run arbitrary code on your page. 
@@ -555,8 +555,8 @@ document.body.appendChild(newPara);</code></pre>
                 </div>
 
                 <!-- 3.4 Events -->
-                <h3 class="temp_border content_header">3.4 Events</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">3.4 Events</h3>
+                <p class=" tutorial_par justify_par">
                 Events are actions that happen in the browser, like a button click, a key press, 
                 a form submission, or a page loading. JavaScript responds to these 
                 using <b>event listeners</b>. The most common way to register an event listener is by using  
@@ -564,7 +564,7 @@ document.body.appendChild(newPara);</code></pre>
                 separate from your HTML and allows multiple handlers on the same element.
                 </p>
 
-<pre><code class="temp_border language-javascript code_snippet">const btn = document.getElementById("my-btn");
+<pre><code class=" language-javascript code_snippet">const btn = document.getElementById("my-btn");
 
 // Using addEventListener
 btn.addEventListener("click", function() {
@@ -584,9 +584,9 @@ btn.addEventListener("click", () => {
 // "mouseover"  - mouse enters an element
 // "load"       - page has fully loaded</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">When registering an event listener, always pass 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">When registering an event listener, always pass 
                         the function as a reference, like <code class="inline_code">addEventListener("click", handleClick)</code>, 
                         not as an invocation. Adding <code class="inline_code">()</code> like 
                         <code class="inline_code">addEventListener("click", handleClick())</code> runs the 
@@ -597,8 +597,8 @@ btn.addEventListener("click", () => {
                 </div>
 
                 <!-- 3.5 jQuery -->
-                <h3 class="temp_border content_header">3.5 jQuery</h3>
-                <p class="temp_border tutorial_par justify_par">
+                <h3 class=" content_header">3.5 jQuery</h3>
+                <p class=" tutorial_par justify_par">
                 jQuery is a JavaScript library that makes DOM manipulation and event handling 
                 more efficient. Instead of basic, verbose vanilla JS like 
                 <code class="inline_code">document.getElementById("btn")</code>, jQuery lets you 
@@ -606,7 +606,7 @@ btn.addEventListener("click", () => {
                 making it intuitive if you already know CSS.
                 </p>
 
-<pre><code class="temp_border language-javascript code_snippet">// Vanilla JS vs jQuery. Produces the same result with less code
+<pre><code class=" language-javascript code_snippet">// Vanilla JS vs jQuery. Produces the same result with less code
 document.getElementById("title").textContent = "Hello";  // vanilla
 $("#title").text("Hello");                               // jQuery
 
@@ -628,9 +628,9 @@ $("#btn").on("click", function() {
 // Chaining (applying multiple actions in one statement)
 $("li").filter(".active").css("color", "green").show();</code></pre>
 
-                <div class="temp_border additional-note">
-                <p class="temp_border note-label">Additional Note</p>
-                <p class="temp_border tutorial_par">jQuery must be loaded before your script uses it. 
+                <div class=" additional-note">
+                <p class=" note-label">Additional Note</p>
+                <p class=" tutorial_par">jQuery must be loaded before your script uses it. 
                 <b>Add it via CDN in your <code class="inline_code">&lt;head&gt;</code></b> before your own 
                 script tags. Also note that <code class="inline_code">$(document).ready(function() {})</code> 
                 delays your jQuery code until the DOM is fully loaded. This is the jQuery equivalent 
@@ -639,37 +639,37 @@ $("li").filter(".active").css("color", "green").show();</code></pre>
         </section>
 
         <!-- Interactive Demo -->
-<section id="demo" class="temp_border">
-    <h2 class="temp_border content_header">Try It Yourself</h2>
-    <p class="temp_border tutorial_par justify_par">
+<section id="demo" class="">
+    <h2 class=" content_header">Try It Yourself</h2>
+    <p class=" tutorial_par justify_par">
         Type any HTML into the editor below and click <b>Run</b> to see it rendered live. 
         Try writing headings, paragraphs, lists, or links using what you have learned 
         in this tutorial.
     </p>
 
-    <div class="temp_border demo-container">  <!-- Using flexbox (demo-container) to have the editor and preview side by side -->
-        <div class="temp_border demo-editor-side"> <!-- Using vertical flex column -->
-            <p class="temp_border demo-label">HTML Editor</p>
-            <textarea id="demo-input" class="temp_border demo-textarea" spellcheck="false">&lt;h1&gt;Hello World!&lt;/h1&gt;
+    <div class=" demo-container">  <!-- Using flexbox (demo-container) to have the editor and preview side by side -->
+        <div class=" demo-editor-side"> <!-- Using vertical flex column -->
+            <p class=" demo-label">HTML Editor</p>
+            <textarea id="demo-input" class=" demo-textarea" spellcheck="false">&lt;h1&gt;Hello World!&lt;/h1&gt;
 &lt;p&gt;This is a &lt;strong&gt;paragraph&lt;/strong&gt;.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Item one&lt;/li&gt;
   &lt;li&gt;Item two&lt;/li&gt;
 &lt;/ul&gt;</textarea>
-            <button id="run-btn" class="temp_border demo-run-btn">Run</button>
+            <button id="run-btn" class=" demo-run-btn">Run</button>
         </div>
 
-        <div class="temp_border demo-preview-side"> <!-- Using vertical flex column -->
-            <p class="temp_border demo-label">Output</p>
-            <div id="demo-output" class="temp_border demo-output"></div>
+        <div class=" demo-preview-side"> <!-- Using vertical flex column -->
+            <p class=" demo-label">Output</p>
+            <div id="demo-output" class=" demo-output"></div>
         </div>
     </div>
 </section>
 
 <!-- Quiz CTA -->
-<section class="temp_border to-quiz-section">
-    <p class="temp_border tutorial_par">Finished the tutorial? Test your knowledge!</p>
-    <a href="./quiz.html" class="temp_border to-quiz-btn">Take the Quiz →</a>
+<section class=" to-quiz-section">
+    <p class=" tutorial_par">Finished the tutorial? Test your knowledge!</p>
+    <a href="./quiz.html" class=" to-quiz-btn">Take the Quiz →</a>
 </section>
     </main>
 

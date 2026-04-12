@@ -16,10 +16,6 @@ body {
   color: #1A1A1A ;
 }
 
-/* .temp_border {
-    border: 2px solid red;
-} */
-
 .rounded_text_colored {
     border: 2px solid var(--forest-border);
     border-radius: 15px;
